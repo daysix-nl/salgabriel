@@ -1,0 +1,27 @@
+{
+  "name": "acf-craft",
+  "title": "Craft",
+  "description": "",
+  "category": "bibliotheek",
+  "icon": "align-pull-left",
+  "keywords": [
+    "block"
+  ],
+  "supports": {
+    "mode": false,
+    "jsx": true
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "acf-craft.php"
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "preview_image_help": "/wp-content/themes/freekvonk/img/local/leeg.png",
+        "is_preview": true
+      }
+    }
+  }
+}

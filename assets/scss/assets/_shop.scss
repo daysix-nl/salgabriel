@@ -1,0 +1,50 @@
+.add-favorite {
+    svg {
+        display: none;
+    }
+
+    svg:nth-of-type(1) {
+        display: block;
+    }
+
+    &.active {
+        svg:nth-of-type(1) {
+            display: none;
+        }
+
+        svg:nth-of-type(2) {
+            display: block;
+        }
+
+        &.close-button-favorite {
+            svg {
+                display: none;
+            }
+
+            svg:nth-of-type(3) {
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+    a .selectoption {
+        top: 35px;
+        left: 0px;
+        right: 0px;
+        opacity: 0;
+        transition-duration: 0.3s;
+    }
+
+    a:hover .selectoption {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+}
