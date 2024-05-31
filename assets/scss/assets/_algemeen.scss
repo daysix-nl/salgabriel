@@ -68,18 +68,18 @@ main {
 
 .text-editor {
   display: grid;
-  gap: 26px;
+  gap: 28px;
 
 
 
   // MD
   @media (min-width: 768px) {
-    gap: 26px;
+    gap: 28px;
   }
 
   // LG
   @media (min-width: 1200px) {
-    gap: 26px;
+    gap: 28px;
   }
 
   // XL
