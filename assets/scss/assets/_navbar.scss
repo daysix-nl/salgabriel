@@ -43,6 +43,7 @@
 
     #search-content {
         opacity: 1;
+
         transition: all .85s cubic-bezier(.645, .045, .355, 1);
 
         #search-navbar {
@@ -58,7 +59,7 @@
         height: 0px;
         width: 0px;
         top: unset;
-        left: unset;
+        left: 0px;
         right: unset;
         bottom: unset;
         opacity: 0;
@@ -68,15 +69,18 @@
         height: 0px;
         width: 0px;
         top: unset;
-        left: unset;
+        left: 0px;
         right: unset;
         bottom: unset;
         opacity: 0;
 
         #search-navbar {
             opacity: 0;
+            display: none;
         }
     }
+
+
 }
 
 

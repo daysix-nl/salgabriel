@@ -26,7 +26,19 @@ try {
     });
 } catch (error) { }
 
-
+try {
+    var swiper = new Swiper(".mySwiper-shop", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+} catch (error) { }
 
 
 try {

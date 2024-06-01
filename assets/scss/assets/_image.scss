@@ -1,0 +1,28 @@
+.swiper-button-next,
+.swiper-button-prev {
+    top: calc(50% + 10px);
+    width: auto !important;
+    height: 20px !important;
+    color: #BFBFBF !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+
+}
+
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 7px));
+    display: inline-block;
+    border-radius: 50%;
+    background: transparent !important;
+    border: 1px solid #2E2E2E !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #2E2E2E !important;
+    opacity: 1 !important;
+}

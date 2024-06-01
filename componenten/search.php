@@ -39,7 +39,7 @@
             </div>
         </div>
     </section>
-    <div class="w-full px-[15px] md:px-[25px] lg:px-[55px] max-w-[1500px] mx-auto">
+    <div id="nopadding" class="w-full px-[15px] md:px-[25px] lg:px-[55px] max-w-[1500px] mx-auto">
         <div class="w-full flex flex-col md:flex-row h-[45px] mt-[65px]">
             <form action="/" method="get" class="md:h-[45px] w-full md:w-[calc(100%-115px)] flex flex-col md:flex-row justify-between items-end">
                 <input type="text" class="bg-[transparent] w-full h-[45px]  md:h-[unset] font-jost text-white text-16 placeholder:text-[#DDDDDD] border-[#fff] border-b-[1px] md:border-b-[0px]" id="search" name="s" placeholder="Search for">
