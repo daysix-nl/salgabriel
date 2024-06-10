@@ -221,27 +221,25 @@
                 <h2 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-19 md:leading-25 xl:text-20 xl:leading-25 uppercase tracking-[0.02em] mt-[3px] text-center">Featured articles</h2>
             </div>
             <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md::mt-[40px] lg:mt-[55px] xl:mt-[75px]">
-                <a href="" class="col-span-1">
+                <?php
+                    $loop = new WP_Query( array(
+                        'post_type' => 'post',
+                        'posts_per_page' => -1,
+                        'orderby' => 'date',
+                        'order' => 'ASC'
+                    )
+                    );
+                    ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); $post_id = get_the_ID();   $thumbnail_url = get_the_post_thumbnail_url();
+                $thumbnail_alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>
+                 <a href="<?php echo get_permalink();?>" class="col-span-1">
                     <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="/wp-content/themes/salgabriel/img/local/img3.png" alt="" class="min-h-full min-w-full object-center object-cover">
+                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="h-full min-h-full min-w-full object-center object-cover">
                     </div>
-                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jost text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
+                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
+                    <div class="text-[#8D8D8D] font-jost text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2"><?php the_excerpt();?></div>
                 </a>
-                <a href="" class="col-span-1">
-                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="/wp-content/themes/salgabriel/img/local/img4.png" alt="" class="min-h-full min-w-full object-center object-cover">
-                    </div>
-                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jost text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
-                </a>
-                <a href="" class="col-span-1">
-                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="/wp-content/themes/salgabriel/img/local/img5.png" alt="" class="min-h-full min-w-full object-center object-cover">
-                    </div>
-                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jost text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
-                </a>
+                <?php endwhile; wp_reset_query(); ?>
                  <div class="col-span-1 h-full">
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">
