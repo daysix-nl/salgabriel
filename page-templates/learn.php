@@ -29,7 +29,7 @@
                     <div class="w-full h-[248px] md:h-[325px] lg:h-[373px] xl:h-[420px] flex items-center justify-center overflow-hidden">
                         <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="h-full min-h-full min-w-full object-center object-cover">
                     </div>
-                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[10px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
+                    <h3 class="text-[#121212] font-jost text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[10px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] ml-[8px]">→</span></h3>
                     <div class="text-[#8D8D8D] font-jost text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2"><?php the_excerpt();?></div>
                 </a>
                 <?php endwhile; wp_reset_query(); ?>
