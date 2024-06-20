@@ -86,7 +86,7 @@
                 <svg id="Group_355" data-name="Group 355" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="auto" height="100%" viewBox="0 0 190.711 172.949">
                 <defs>
                     <clipPath id="clip-path">
-                    <rect id="Rectangle_511" data-name="Rectangle 511" width="190.711" height="172.949" fill="none"/>
+                    <rect id="Rectangle_511" data-name="Rectangle 511" width="auto" height="100%" fill="none"/>
                     </clipPath>
                 </defs>
                 <g id="Group_354" data-name="Group 354" clip-path="url(#clip-path)">
