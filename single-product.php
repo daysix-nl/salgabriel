@@ -22,9 +22,9 @@ if ( post_password_required() ) {
 } ?>
 
 <main class="relative">
-    <div id="single-product" class="w-full md:w-[718px] lg:w-[1170px] xl:w-[1330px] mx-auto">
+    <div id="single-product" class="container">
         <div class="w-full grid grid-cols-1 md:grid-cols-2">
-            <div class="w-full md:w-[334px] lg:w-[565px] xl:w-[640px]">
+            <div class="w-full md:w-[307px] lg:w-[535px] xl:w-[600px]">
                 <!-- PRODUCT AFBEELDING -->
                     <?php
                     global $product;
@@ -91,7 +91,7 @@ if ( post_password_required() ) {
 
             <div class="h-auto relative">
                 <div class="w-[360px] mx-auto md:mx-[unset] md:w-[359px] lg:w-[535px] xl:w-[605px]  sticky top-[108px] xl:top-[123px] lg:pl-[20px]">
-                    <div class="md:min-h-[683px] lg:min-h-[565px] xl:min-h-[640px] flex flex-col justify-between">
+                    <div class="md:min-h-[626px] lg:min-h-[535px] xl:min-h-[600px] flex flex-col justify-between">
                         <div class="">
                             <div class="flex items-start mt-[30px] md:mt-[25px] lg:mt-[60px] xl:mt-[75px] justify-between mb-[15px] md:mb-[35px] xl:mb-[40px]">
                                 <!-- PRODUCT TITEL EN PRIJS -->
@@ -441,7 +441,35 @@ if ( post_password_required() ) {
         </div>
     </div>
 
-
+    <section>
+        <div class="container mt-[80px] lg:flex lg:justify-between">
+            <div class="w-full lg:w-[410px]">
+                <div class="w-[306px]">
+                    <h2 class="text-[#121212] font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Product <br><span class="font-syne">information</span></h2>
+                </div>
+            </div>
+            <div class="w-full lg:w-[840px] mt-[20px] lg:mt-[unset]">
+                <?php
+                if( have_rows('tabs') ):
+                    while( have_rows('tabs') ) : the_row(); ?>
+                    <div class="accordion-item"> 
+                        <button class="accordion text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost pr-2 md:pr-3 lg:pr-4 py-2">
+                            <span class="pr-4"><?php echo get_sub_field('title');?></span>
+                        </button>
+                        <div class="panel">
+                            <div class="pb-3 pr-2 md:pb-4 md:pr-3 lg:pb-4  lg:pr-4">
+                                <div class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost lg:max-w-[685px] md:max-w-[604px] max-w-[246px] text-editor"><?php echo get_sub_field('text');?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    endwhile;
+                else :
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
 
 
 
