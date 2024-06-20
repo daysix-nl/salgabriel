@@ -29,7 +29,7 @@ if ( post_password_required() ) {
                     <?php
                     global $product;
                     if ($product->get_gallery_image_ids()) { ?>
-                        <div class="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-[15px]">
+                        <div class="hidden md:grid grid-cols-1 lg:grid-cols-1 gap-[15px]">
                             <!-- PRODUCT AFBEELDING -->
                             <div class="aspect-square w-full bg-[#F9F9F9] overflow-hidden">
                                 <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="min-w-full min-h-full object-cover object-center mix-blend-multiply">

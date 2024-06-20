@@ -3,3 +3,77 @@ img.packshot {
     aspect-ratio: 3/2;
     object-fit: contain;
 }
+
+
+
+.accordion-item {
+    background-color: transparent;
+    border-bottom: 1px solid #DDDDDD;
+
+
+    .accordion {
+        background-color: transparent;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition-delay: .2s;
+        transition-property: border-radius, background-color, color;
+        transition-duration: .2s;
+        border-radius: 0px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        // padding: 20px 30px;
+
+        // // media query
+        // @media (min-width: 768px) {
+        //     padding: 30px 30px;
+        // }
+
+        // @media (min-width: 1280px) {
+        //     padding: 20px 40px;
+        // }
+
+        &::after {
+            content: "+";
+            position: absolute;
+            right: 30px;
+            transform: translateY(-50%);
+            top: 54%;
+            width: 15px;
+            text-align: center;
+
+
+            @media (min-width: 768px) {
+                right: 20px;
+            }
+
+            @media (min-width: 1280px) {
+                right: 25px;
+            }
+        }
+
+        &.active {
+            background-color: transparent;
+            border-radius: 9px 9px 0 0;
+
+            &::after {
+                content: "-";
+                top: 54%;
+            }
+
+
+        }
+
+
+    }
+
+    .panel {
+        border-radius: 0 0 9px 9px;
+        overflow: hidden;
+        height: 0;
+        transition: height .2s ease-out;
+    }
+}
