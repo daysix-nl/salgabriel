@@ -443,7 +443,7 @@ function customize_dashboard_menu() {
             'edit.php?post_type=acf-field-group',
             'edit-comments.php',
             'themes.php',
-            'plugins.php',
+            // 'plugins.php',
             // 'users.php',
             'options-general.php',
             'tools.php',

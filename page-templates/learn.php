@@ -8,7 +8,7 @@
 
 <main class="w-full">
     <!-- FEATURED ARTICLES -->
-    <section class="border-b-[1px] md:border-b-[0px] lg:border-b-[1px] border-[#DDDDDD]">
+    <section>
         <div class="mb-[90px] lg:mb-[100px] xl:mb-[110px] pt-[25px] md:pt-[15px] lg:pt-[35px] xl:pt-[40px]">
             <div class="container">
                 <h1 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-19 md:leading-25 xl:text-20 xl:leading-25 uppercase tracking-[0.02em] mt-[3px]"><?php the_title();?></h1>

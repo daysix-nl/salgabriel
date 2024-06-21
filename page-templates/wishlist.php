@@ -51,18 +51,18 @@
 
                         wp_reset_postdata();
                     else : ?>
-                        <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">You haven't liked any products yet</p>'
+                        <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">You haven't liked any products yet. Click <a href="/shop" class="underline">here</a> to continue shopping.</p>'
                         <?php
                     endif;
                 } else { ?>
-                        <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">You haven't liked any products yet</p>
+                        <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">You haven't liked any products yet. Click <a href="/shop" class="underline">here</a> to continue shopping.</p></p>
                         <?php
                 }
             } else {
                 echo 'Error decoding favorite products';
             }
         } else { ?>
-            <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">It looks like you are not using cookies.</p>
+            <p class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">You haven't liked any products yet. Click <a href="/shop" class="underline">here</a> to continue shopping.</p></p>
         <?php
         }
         ?>

@@ -29,7 +29,7 @@ get_header( 'shop' ); ?>
             <p class="text-15 leading-23 xl:text-16 xl:leading-25 tracking-[0.15em] font-jost font-normal uppercase">Search results: <? echo $search_query ?></p>
         </div>
     </div>
-    <div class="container grid grid-cols-2 lg:grid-cols-4 gap-x-[8px] md:gap-x-[20px] lg:gap-x-[30px] gap-y-[20px] lg:gap-y-[35px] mb-[90px] md:mb-[100px] lg:mb-[120px] xl:mb-[145px]">
+    <div class="container grid grid-cols-2 lg:grid-cols-4 gap-x-[8px] md:gap-x-[20px] lg:gap-x-[30px] gap-y-[20px] lg:gap-y-[35px] mb-[90px] md:mb-[100px] lg:mb-[120px] xl:mb-[145px] relative">
      <?php
         // Haal de zoekterm op uit de URL
 
@@ -54,11 +54,13 @@ get_header( 'shop' ); ?>
                 endwhile;
                 // Herstel de oorspronkelijke query
                 wp_reset_postdata();
-            else :
-                echo 'No products found';
+            else : ?>
+           <div class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">No products found. Click <a href="/shop" class="underline">here</a> to continue shopping.</div>
+            <?php
             endif;
-        } else {
-            echo 'No products found';
+        } else { ?>
+           <div class="font-jost font-normal text-17 leading-30 text-[#000000] tracking-[0.05em] absolute top-0 left-[15px] md:left-0 right-0">No products found. Click <a href="/shop" class="underline">here</a> to continue shopping.</div>
+            <?php
         }
         ?>
     </div>

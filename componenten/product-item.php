@@ -14,7 +14,23 @@
     </button>
     <a href="<?php the_permalink(); ?>">
         <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden relative">
-            <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="min-h-full min-w-full object-center object-cover">
+            <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-full min-h-full min-w-full object-center object-cover">
+            
+           <?php
+            global $product;
+            if ( $product->get_gallery_image_ids() ) {
+                $gallery_image_ids = $product->get_gallery_image_ids();
+                if ( !empty( $gallery_image_ids ) ) {
+                    $first_image_id = $gallery_image_ids[0];
+                    $image_url = wp_get_attachment_url( $first_image_id ); ?>
+                    <div class="absolute top-0 left-0 bottom-0 right-0">
+                        <img src="<?php echo esc_url( $image_url ); ?>" alt="" class="h-full min-h-full min-w-full object-center object-cover">
+                    </div>
+                <?php
+                }
+            }
+            ?>
+
             <!-- NEW -->
             <?php if (get_field('new', get_the_ID()) === "yes"): ?>   
                 <div class="absolute top-1 left-1 md:top-2 md:left-2 right-[unset]">

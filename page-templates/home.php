@@ -76,7 +76,7 @@
             <h2 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-19 md:leading-25 xl:text-20 xl:leading-25 uppercase tracking-[0.02em] mt-[3px] text-center">Get your game on</h2>
             <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 text-center traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[45px] md:mt-[50px] lg:mt-[30px] xl:mt-[40px]">Whether you’re a seasoned backgammon enthusiast or a newcomer to the game, we invite you to explore the world of Sal Gabriel. Unearth the beauty of our handmade creations and rediscover the thrill of the game. Join us in reviving the game, one roll of the dice at a time.</p>        
             <a href="/shop" class="flex items-center w-fit mx-auto mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
-                <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em] correction">Read more</p>
+                <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em] correction">Discover more</p>
                 <div class="mt-[2px] arrow-link font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28">→</div>
             </a>
         </div>

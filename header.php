@@ -68,7 +68,6 @@
                 </g>
             </g>
         </svg>
-
     </a>
     <div class="flex justify-end w-[65px] md:w-[167px] lg:w-[320px]">
         <div class="w-full max-w-[65px] lg:max-w-[120px] flex justify-end md:justify-between h-[18px]">
@@ -96,7 +95,6 @@
                         <path id="Path_635" data-name="Path 635" d="M181.85,87.971c.379,0,.756,0,1.132,0a.341.341,0,0,1,.07.008c-.4,0-.795,0-1.2,0-.006,0,0-.006,0-.009" transform="translate(-175.753 -85.021)" fill="#202024"/>
                     </g>
                 </svg>
-
             </button>
         </div>
     </div>
