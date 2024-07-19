@@ -12,8 +12,8 @@
             </g>
         </svg>
     </button>
-    <a href="<?php the_permalink(); ?>">
-        <div id="product-img" class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden relative">
+    <a id="product-img" href="<?php the_permalink(); ?>">
+        <div  class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden relative">
             <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-full min-h-full min-w-full object-center object-cover">
             
            <?php
