@@ -123,6 +123,9 @@
             <div class="w-full md:w-[447px] lg:w-[282px] xl:w-[346px] order-2 md:order-3 lg:order-4 md:mt-[42px] lg:mt-[unset]">
                 <h3 class="font-syne font-bold text-14 leading-22 tracking-[0.06em] text-[#000] uppercase mb-[20px] xl:mb-[30px]">Get the latest news</h3>
                 <p class="font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Sign up to our newsletter and stay up-to-date receive 5% off your first order.</p>
+                <div class="newsletter mt-[20px] max-w-[346px]">
+                     <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
+                </div>
             </div>
         </div>
     </section>

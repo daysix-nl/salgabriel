@@ -164,7 +164,7 @@
     </section>
 
     <!-- AS SEEN IN -->
-    <section class="border-b-[1px] border-[#DDDDDD]">
+    <!-- <section class="border-b-[1px] border-[#DDDDDD]">
          <div class="my-[90px] lg:my-[90px] xl:my-[90px]">
             <h2 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-19 md:leading-25 xl:text-20 xl:leading-25 uppercase tracking-[0.02em] text-center w-full max-w-[335px] md:max-w-[624px] lg:max-w-[665px] xl:max-w-[706px] mx-auto">As seen in</h2>
             <div class="w-screen relative overflow-x-hidden swiper swiperhero mt-[55px] md::mt-[50px] xl:mt-[65px]">
@@ -211,7 +211,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
      <!-- FEATURED ARTICLES -->
     <section class="border-b-[1px] md:border-b-[0px] lg:border-b-[1px] border-[#DDDDDD]">
