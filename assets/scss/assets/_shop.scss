@@ -48,3 +48,19 @@
         transition-duration: 0.3s;
     }
 }
+
+#product-img {
+    #hover-img {
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    &:hover {
+        #hover-img {
+            opacity: 1;
+            transition: .5s ease;
+        }
+    }
+
+
+}
