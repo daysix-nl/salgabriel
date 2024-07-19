@@ -3182,6 +3182,10 @@ video {
     font-size: 13px;
   }
 
+  .xl\:text-14 {
+    font-size: 14px;
+  }
+
   .xl\:text-16 {
     font-size: 16px;
   }
@@ -3216,6 +3220,10 @@ video {
 
   .xl\:leading-20 {
     line-height: 20px;
+  }
+
+  .xl\:leading-24 {
+    line-height: 24px;
   }
 
   .xl\:leading-25 {

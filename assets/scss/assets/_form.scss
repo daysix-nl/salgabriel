@@ -139,6 +139,10 @@
 
 
 .newsletter {
+    * {
+        font-family: Jost, sans-serif !important;
+    }
+
     position: relative;
 
     label {
@@ -155,7 +159,7 @@
         padding-right: 110px !important;
         background: transparent !important;
 
-        font-weight: 500 !important;
+        font-weight: 600 !important;
 
         &::placeholder {
             color: #A6A6A5 !important;
@@ -169,7 +173,7 @@
         border: 0px solid #A7A7A7 !important;
         font-size: 12px !important;
         text-transform: uppercase !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
         padding-right: 20px !important;
         cursor: pointer !important;
     }
@@ -199,20 +203,24 @@
 .basis-form {
     position: relative;
 
+    * {
+        font-family: Jost, sans-serif !important;
+    }
+
     label {
         font-size: 13px !important;
-
-        font-weight: 500 !important;
+        font-weight: 600 !important;
+        margin-bottom: 2px !important;
     }
 
     input {
         height: 52px !important;
         width: 100% !important;
-        border: 1px solid #A7A7A7 !important;
-        border-radius: 4px !important;
-        font-size: 12px !important;
-        padding-left: 24px !important;
-        padding-right: 24px !important;
+        border: 1px solid #DEDEDE !important;
+        border-radius: 0px !important;
+        font-size: 16px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
         background: transparent !important;
 
         font-weight: 500 !important;
@@ -226,7 +234,7 @@
             height: unset !important;
             width: fit-content !important;
             margin-top: 5px !important;
-            margin-right: 10px !important;
+            margin-right: 20px !important;
         }
 
         &.datepicker {
@@ -242,6 +250,7 @@
 
         label {
             font-weight: 400 !important;
+            font-size: 16px !important;
         }
     }
 
@@ -250,11 +259,11 @@
     textarea {
         // height: 59px !important;
         width: 100% !important;
-        border: 1px solid #A7A7A7 !important;
-        border-radius: 4px !important;
-        font-size: 12px !important;
-        padding-top: 24px !important;
-        padding-left: 24px !important;
+        border: 1px solid #DEDEDE !important;
+        border-radius: 0px !important;
+        font-size: 16px !important;
+        padding-top: 10px !important;
+        padding-left: 10px !important;
         padding-right: 24px !important;
         background: transparent !important;
 
