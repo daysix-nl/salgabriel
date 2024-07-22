@@ -245,8 +245,8 @@
                          <div class="w-fit text-left">
                             <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212]">Learn</h3>
                             <h2 class="text-[#121212] font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">View more <br><span class="font-syne">articles</span></h2>
-                            <a href="" class="text-[#121212] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block md:hidden">See more</a>
-                            <a href="" class="text-[#121212] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline hidden md:block">Discover more</a>
+                            <a href="/learn/" class="text-[#121212] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block md:hidden">See more</a>
+                            <a href="/learn/" class="text-[#121212] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline hidden md:block">Discover more</a>
                         </div> 
                     </div>
                 </div>
