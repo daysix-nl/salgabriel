@@ -461,32 +461,7 @@ if ( post_password_required() ) {
                                 <?php if (get_sub_field('text')): ?>   
                                 <div class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost lg:max-w-[685px] md:max-w-[604px] max-w-[246px] text-editor"><?php echo get_sub_field('text');?></div>
                                 <?php endif; ?>
-                                <div class="">
-                                    <div class="w-full grid grid-cols-2">
-                                    
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Eigenschap</p>
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Specificatie</p>
-                                    
-                                    </div>
-                                    <div class="w-full grid grid-cols-2">
-                                    
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Eigenschap</p>
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Specificatie</p>
-                                    
-                                    </div>
-                                    <div class="w-full grid grid-cols-2">
-                                    
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Eigenschap</p>
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Specificatie</p>
-                                    
-                                    </div>
-                                    <div class="w-full grid grid-cols-2">
-                                    
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Eigenschap</p>
-                                        <p class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost">Specificatie</p>
-                                    
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

@@ -25,8 +25,8 @@
 <header class="fixed top-0 left-0 right-0 bg-white z-[9999]">
 
 <section class="h-[30px] md:h-[35px] bg-black w-full items-center justify-center flex">
-    <p class="font-jost font-normal text-12 leading-12 xl:text-13 xl:leading-13 text-white hidden md:block">April promotion: free shipping & 15% discount on orders above €75 </p>
-    <p class="font-jost font-normal text-12 leading-12 xl:text-13 xl:leading-13 text-white md:hidden">Free shipping on orders above €75</p>
+    <p class="font-jost font-normal text-12 leading-12 xl:text-13 xl:leading-13 text-white hidden md:block">Free shipping on orders above €85*</p>
+    <p class="font-jost font-normal text-12 leading-12 xl:text-13 xl:leading-13 text-white md:hidden">Free shipping on orders above €85*</p>
 </section>
 <section id="navbar" class="h-[78px] xl:h-[88px] w-full flex items-center justify-between px-[15px] md:px-[25px] lg:px-[55px] max-w-[1500px] mx-auto top-0 bg-white">
     <div class="w-[65px] md:w-[167px] lg:w-[320px]">

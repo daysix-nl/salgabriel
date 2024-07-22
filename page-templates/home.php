@@ -11,22 +11,22 @@
     <section class="bg-[#EBE8E2] h-[calc(100dvh-109px)] md:h-[calc(100dvh-114px)] xl:h-[calc(100dvh-123px)] min-h-[520px] max-h-[544px] md:min-h-[520px] md:max-h-[577px] lg:min-h-[530px] lg:max-h-[700px] w-full flex flex-col items-center justify-center overflow-hidden">
         <div class="w-[508px] md:w-full max-w-[508px] md:max-w-[610px] lg:max-w-[726px] xl:max-w-[892px] grid grid-cols-3 md:grid-cols-4 gap-[20px] xl:gap-[25px] md:mt-[30px]">
             <div class="w-full hidden md:block order-1">
-                <img src="/wp-content/themes/salgabriel/img/local/product1.png" alt="">
+                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammon-SalGabriel-Orange.png" alt="">
             </div>
             <div class="w-full order-3 md:order-2">
-                <img src="/wp-content/themes/salgabriel/img/local/product2.png" alt="">
+                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammon-SalGabriel-Beige.png" alt="">
             </div>
             <div class="w-full order-1 md:order-3">
-                <img src="/wp-content/themes/salgabriel/img/local/product3.png" alt="">
+                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammon-SalGabriel-Skyblue.png" alt="">
             </div>
             <div class="w-full order-2 md:order-4">
-                <img src="/wp-content/themes/salgabriel/img/local/product4.png" alt="">
+                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammon-SalGabriel-Navy.png" alt="">
             </div>
         </div>
         <div class="w-full md:max-w-[553px]">
             <h1 class="text-[#121212] font-pinyon md:font-jost lg:font-pinyon font-normal text-45 leading-45 md:text-18 md:leading-28 lg:text-56 lg:leading-56 xl:text-60 xl:leading-60 text-center mt-[35px] md:mt-[45px] lg:mt-[40px] tracking-[0.05em] ">Let's play.</h1>
             <h2 class="text-[#121212] max-w-[262px] md:max-w-[unset] mx-auto font-syne md:font-jost lg:font-syne font-bold md:font-normal lg:font-bold text-17 leading-28 md:text-18 md:leading-28 lg:text-18 ld:leading-24 xl:text-20 xl:leading-28 text-center uppercase md:normal-case lg:uppercase mt-[15px] md:mt-0 lg:mt-[25px] tracking-[0.05em]">Luxury design meets traditional art.</h2>
-            <p class="text-[#121212] max-w-[315px] mx-auto md:max-w-[unset] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 text-center tracking-[0.02em] xl:tracking-[0.025em] mt-[10px] lg:mt-[10px]">Our passion for preserving the traditional art of gaming has led us to create a stunning range of luxurious leather games. </p>
+            <p class="text-[#121212] max-w-[315px] mx-auto md:max-w-[unset] font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 text-center tracking-[0.02em] xl:tracking-[0.025em] mt-[10px] lg:mt-[10px]">Our passion for preserving the traditional art of gaming has led us to create a stunning range of luxurious leather games.</p>
             <a href="/shop" class="text-[#121212] block w-fit mx-auto font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 text-center tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline">Discover now</a>
         </div>
     </section>
@@ -74,9 +74,9 @@
         <div class="my-[90px] lg:my-[100px] xl:my-[110px] w-full max-w-[335px] md:max-w-[624px] lg:max-w-[665px] xl:max-w-[706px] mx-auto">
             <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212] text-center">Let's go</h3>
             <h2 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-19 md:leading-25 xl:text-20 xl:leading-25 uppercase tracking-[0.02em] mt-[3px] text-center">Get your game on</h2>
-            <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 text-center traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[45px] md:mt-[50px] lg:mt-[30px] xl:mt-[40px]">Whether you’re a seasoned backgammon enthusiast or a newcomer to the game, we invite you to explore the world of Sal Gabriel. Unearth the beauty of our handmade creations and rediscover the thrill of the game. Join us in reviving the game, one roll of the dice at a time.</p>        
+            <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 text-center traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[45px] md:mt-[50px] lg:mt-[30px] xl:mt-[40px]">Whether you’re a seasoned backgammon enthusiast or a newcomer to the game, we invite you to explore the world of Sal Gabriel. Unearth the beauty of our handmade creations and rediscover the thrill of the game. Join us in reviving the game.</p>        
             <a href="/shop" class="flex items-center w-fit mx-auto mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
-                <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em] correction">Discover more</p>
+                <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em] correction">Explore</p>
                 <div class="mt-[2px] arrow-link font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28">→</div>
             </a>
         </div>
@@ -144,8 +144,8 @@
                 </div>
                 <h3 class="text-[#121212] font-syne font-bold text-18 leading-25 md:text-20 md:leading-25 lg:text-20 lg:leading-25 uppercase tracking-[0.02em] mt-[40px] lg:mt-[55px]">Craftsmanship</h3>
                 <h2 class="font-garamond font-medium text-50 leading-55 lg:text-55 lg:leading-55 xl:text-60 xl:leading-55 uppercase tracking-[0.07em] mt-[10px] lg:mt-[40px] xl:mt-[15px]">R<i>e</i>vi<i>vi</i>ng <br>the game</h2>
-                <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[40px]">Our backgammon sets are designed for the modern individual who appreciates the fusion of heritage and style. We’re here to transform your downtime into something extraordinary.</p>
-                <a href="" class="flex items-center w-fit mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
+                <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[40px]">Our love for the game has driven us to create a product which becomes a cherished family treasure for generations. </p>
+                <a href="/craft/" class="flex items-center w-fit mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
                     <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em]">Read more</p>
                     <div class="mt-[2px] arrow-link font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28">→</div>
                 </a>
@@ -153,10 +153,10 @@
             <div class="w-full max-w-[360px] md:max-w-[340px] lg:max-w-[586px] xl:max-w-[588px] xl:mr-[93px] order-1 md:order-2">
                 <div class="relative h-[431px] md:h-[435px] lg:h-[689px] xl:h-[692px] w-full">
                     <div class="w-[262px] h-[344px] md:w-[243px] md:h-[323px] lg:w-[424px] lg:h-[633px] xl:w-[426px] xl:h-[636px] bg-black absolute top-0 left-0 overflow-hidden">
-                        <img src="/wp-content/themes/salgabriel/img/local/img1.png" alt="" class="min-h-full min-w-full object-cover object-center">
+                        <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/IMG_5129-scaled-e1721642796415.jpg" alt="" class="min-h-full min-w-full object-cover object-center">
                     </div>
                     <div class="w-[167px] h-[249px] md:w-[193px] md:h-[288px] lg:w-[285px] lg:h-[427px] xl:w-[287px] xl:h-[429px] bg-black absolute right-[13px] md:right-0 bottom-0 overflow-hidden">
-                        <img src="/wp-content/themes/salgabriel/img/local/img2.png" alt="" class="min-h-full min-w-full object-cover object-center">
+                        <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/IMG_5124-scaled.jpg" alt="" class="min-h-full min-w-full object-cover object-center">
                     </div>
                 </div>
             </div>
@@ -266,7 +266,7 @@
                     </div>
                     <div class="absolute top-0 right-[30px] lg:right-0 lg:left-0 bottom-0">
                         <div class="w-full h-full flex items-center">
-                            <img src="/wp-content/themes/salgabriel/img/local/product4.png" alt="" class="w-full max-w-[268px] lg:max-w-[356px] xl:max-w-[382px] ml-[60px] lg::ml-[30px] xl:ml-[35px]">
+                            <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammon-SalGabriel-Navy.png" alt="" class="w-full max-w-[268px] lg:max-w-[356px] xl:max-w-[382px] ml-[60px] lg::ml-[30px] xl:ml-[35px]">
                         </div>
                     </div>
                 </div>
@@ -275,8 +275,8 @@
                 <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
                     <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212]">In the spotlight</h3>
                     <h2 class="text-[#121212] font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Traditional<br><span class="font-syne">colour combination</span></h2>
-                    <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[40px] w-full max-w-[270px] lg:max-w-[302px] xl:max-w-[321px]">Our backgammon sets are designed for the modern individual who appreciates the fusion of heritage and style.</p>
-                    <a href="/product/test-product/" class="flex items-center w-fit mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
+                    <p class="text-[#121212] font-jost font-normal text-15 leading-26 lg:text-16 lg:leading-28 xl:text-17 xl:leading-30 traking-[0.05em] md:traking-[0.02em] lg:tracking-[0.05em] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[40px] w-full max-w-[270px] lg:max-w-[302px] xl:max-w-[321px]">Our backgammon sets are designed for the modern individual who appreciates the fusion of heritage and style. It is designed to become a cherished family treasure for generations. </p>
+                    <a href="/product/backgammon-navy/" class="flex items-center w-fit mt-[40px] md:mt-[60px] lg:mt-[40px] xl:mt-[30px]">
                         <p class="font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28 tracking-[0.1em]">Shop now</p>
                         <div class="mt-[2px] arrow-link font-syne font-bold uppercase text-14 leading-25 lg:text-15 lg:leading-28 xl:text-16 xl:leading-28">→</div>
                     </a>
@@ -288,7 +288,7 @@
     <!-- FOLLOW US -->
     <section class="h-full lg:h-[418px] xl:h-[470px] bg-[#DE562E] grid md:hidden lg:flex justify-end relative overflow-hidden">
         <div class="h-full w-screen lg:w-[calc(50%-345px)] xl:w-[calc(50%-390px)] bg-black relative overflow-hidden order-2">
-            <img src="/wp-content/themes/salgabriel/img/local/img6.png" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
+            <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammonbw.jpg" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
         </div>
         <div class="lg:absolute top-0 left-0 right-0 bottom-0 order-1 z-[2]">
             <div class="w-full h-full flex items-center">
@@ -298,18 +298,18 @@
                             <div class="">
                                 <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@SALGABRIELCO</h3>
                                 <h2 class="text-white font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Follow us <br><span class="font-syne">on Instagram</span></h2>
-                                <a href="" class="text-white font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block">Instagram</a>
+                                <a href="https://www.instagram.com/SALGABRIELCO/" class="text-white font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block" target="_blank">Instagram</a>
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
                             <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
-                                <img src="/wp-content/themes/salgabriel/img/local/img7.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammonblue.jpg" alt="" class="min-h-full min-w-full object-cover ocject-center">
                             </div>
                             <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
-                                <img src="/wp-content/themes/salgabriel/img/local/img8.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Backgammonorange.jpg" alt="" class="min-h-full min-w-full object-cover ocject-center">
                             </div>
                             <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden">
-                                <img src="/wp-content/themes/salgabriel/img/local/img9.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                                <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/Kaarten.jpg" alt="" class="min-h-full min-w-full object-cover ocject-center">
                             </div>
                         </div>
                     </div>
