@@ -263,7 +263,7 @@ if ( post_password_required() ) {
                                                         <path id="shipping-truck-svgrepo-com" d="M16.5,6H3V17.25H4.527a2.625,2.625,0,0,0,5.2,0h5.3a2.625,2.625,0,0,0,5.2,0H21.75V12.439L18.311,9H16.5Zm0,4.5v4A2.628,2.628,0,0,1,20,15.75h.253V13.061L17.689,10.5ZM15,15.75V7.5H4.5v8.25h.253a2.626,2.626,0,0,1,4.745,0ZM17.625,18a1.125,1.125,0,1,1,1.125-1.125A1.125,1.125,0,0,1,17.625,18ZM8.25,16.875A1.125,1.125,0,1,1,7.125,15.75,1.125,1.125,0,0,1,8.25,16.875Z" transform="translate(-3 -6)" fill="#2e2e2e" fill-rule="evenodd"/>
                                                     </svg>
                                                 </div>
-                                                <p class="text-[#3C3C3C] text-16 leading-28 font-jost w-full tracking-[0.025em]">Free shipping on orders above €50</p>
+                                                <p class="text-[#3C3C3C] text-16 leading-28 font-jost w-full tracking-[0.025em]">Free shipping on orders above €85</p>
                                             </div>
                                             <div class="flex items-start">
                                                 <div class="w-[37px] h-[28px] flex items-center">
@@ -301,7 +301,7 @@ if ( post_password_required() ) {
                                                         <path id="shipping-truck-svgrepo-com" d="M16.5,6H3V17.25H4.527a2.625,2.625,0,0,0,5.2,0h5.3a2.625,2.625,0,0,0,5.2,0H21.75V12.439L18.311,9H16.5Zm0,4.5v4A2.628,2.628,0,0,1,20,15.75h.253V13.061L17.689,10.5ZM15,15.75V7.5H4.5v8.25h.253a2.626,2.626,0,0,1,4.745,0ZM17.625,18a1.125,1.125,0,1,1,1.125-1.125A1.125,1.125,0,0,1,17.625,18ZM8.25,16.875A1.125,1.125,0,1,1,7.125,15.75,1.125,1.125,0,0,1,8.25,16.875Z" transform="translate(-3 -6)" fill="#2e2e2e" fill-rule="evenodd"/>
                                                     </svg>
                                                 </div>
-                                                <p class="text-[#3C3C3C] text-16 leading-28 font-jost w-full tracking-[0.025em]">Free shipping on orders above €50</p>
+                                                <p class="text-[#3C3C3C] text-16 leading-28 font-jost w-full tracking-[0.025em]">Free shipping on orders above €85</p>
                                             </div>
                                             <div class="flex items-start">
                                                 <div class="w-[37px] h-[28px] flex items-center">

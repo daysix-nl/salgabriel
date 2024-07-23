@@ -172,3 +172,32 @@
 
     }
 }
+
+
+.menuhover a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width .3s;
+}
+
+.menuhover a:hover::after {
+    width: 100%;
+}
+
+
+
+// LG
+@media (min-width: 1200px) {
+    .hoveropacity {
+        opacity: 1 !important;
+        transition-duration: .3s !important;
+    }
+
+    .hoveropacity:hover {
+        opacity: 0.8 !important;
+        transition-duration: .3s !important;
+    }
+}

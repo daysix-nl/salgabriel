@@ -58,6 +58,7 @@ img.packshot {
         &.active {
             background-color: transparent;
             border-radius: 9px 9px 0 0;
+            text-shadow: 0.6px 0 0 #000;
 
             &::after {
                 content: "-";
