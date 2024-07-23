@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 	return;
 } ?>
 
-<main class="relative">
+<main class="relative share-close">
     <div id="single-product" class="container">
         <div class="w-full grid grid-cols-1 md:grid-cols-2">
             <div class="w-full md:w-[307px] lg:w-[535px] xl:w-[600px]">
@@ -426,13 +426,13 @@ if ( post_password_required() ) {
                                             <path id="Path_592" data-name="Path 592" d="M-11314.768-14707.125l-1.353-1.451-2.273-.832-2.089.131-1.46.7-1.46,1.172-1.092,2.137.166,2.663,1.045,2.448,2.65,3.053,5.159,4.194.706.363,3.294-2.229,2.932-2.633,2.824-3.62.728-2.6-.231-2.114-.922-1.666-1.845-1.45-2.5-.643-2.43.643Z" transform="translate(11324.494 14709.497)" fill="#2e2e2e"/>
                                         </svg>
                                     </button>
-                                    <button id="shareButton" class="h-[47px] w-[47px] xl:h-[52px] xl:w-[52px] border-[1px] border-[#8D8D8D] md:hover:bg-[#f8f8f8] duration-300 flex justify-center items-center rounded-[2px] xl:rounded-[3px]">
+                                    <button id="share-button" class="h-[47px] w-[47px] xl:h-[52px] xl:w-[52px] border-[1px] border-[#8D8D8D] md:hover:bg-[#f8f8f8] duration-300 flex justify-center items-center rounded-[2px] xl:rounded-[3px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16.789" height="13.339" viewBox="0 0 16.789 13.339">
                                             <path id="Vector" d="M8.765,11.747l2.9-2.9m0,0,2.9,2.9m-2.9-2.9V14.65M4,14.65v5.962H19.489V14.65" transform="translate(-3.35 -7.924)" fill="none" stroke="#2e2e2e" stroke-linecap="round" stroke-width="1.3"/>
                                         </svg>
                                     </button>
                                 </div>
-                                <p class="w-full text-center order-3 md:hidden mt-[20px] font-jost text-14 leading-24 tracking-[0.05em] font-normal underline text-[#B7B7B7]">Share</p>
+                                <p id="share-button-mobile" class="cursor-pointer w-full text-center order-3 md:hidden mt-[20px] font-jost text-14 leading-24 tracking-[0.05em] font-normal underline text-[#B7B7B7]">Share</p>
                             </div>
                         </div>
                     </div>
@@ -542,7 +542,37 @@ if ( post_password_required() ) {
             <path id="shopping-bag" d="M16.1,8.26a.449.449,0,0,0-.349-.169H13.436A3.473,3.473,0,0,0,10.048,5H9.136A3.473,3.473,0,0,0,5.748,8.091H3.432a.449.449,0,0,0-.355.167.49.49,0,0,0-.1.391l1.223,7.2a1.5,1.5,0,0,0,1.462,1.272h7.861a1.5,1.5,0,0,0,1.462-1.274l1.223-7.2A.489.489,0,0,0,16.1,8.26ZM9.136,5.951h.913a2.54,2.54,0,0,1,2.466,2.14H6.669A2.54,2.54,0,0,1,9.136,5.951Zm4.953,9.734a.579.579,0,0,1-.566.49H5.661a.579.579,0,0,1-.563-.487L3.975,9.042H15.208Z" transform="translate(-2.969 -5)" fill="#fff"/>
         </svg>
         Add to bag</a>
+    
 
+
+     <div id="share-section" class="top-0 left-0 right-0 bottom-0 bg-[#0a1f1654] justify-center items-center z-[9999]">
+        <div class="w-[360px] md:w-[686px] lg:w-[686px] xl:w-[715px] bg-white">
+            <div class="w-full flex justify-end pt-[20px] pr-[20px]">
+                <button id="share-close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.999" height="13.999" viewBox="0 0 13.999 13.999">
+                            <g id="close-svgrepo-com" transform="translate(-6.439 -6.439)">
+                                <path id="Path_18" data-name="Path 18" d="M7.5,7.5,19.378,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"></path>
+                                <path id="Path_19" data-name="Path 19" d="M19.378,7.5,7.5,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"></path>
+                            </g>
+                        </svg>
+                </button>
+            </div>
+            <div class="px-[20px] lg:px-[50px] pt-[30px] pb-[50px]">
+                <h2 class="font-jost text-15 leading-23 lg:text-15 md:leading-25 xl:text-16 xl:leading-25 tracking-[0.05em] text-[#000000] font-normal md:font-bold uppercase">Share this</h2>
+                <p class="font-jost font-normal text-15 leading-26 tracking-[0.02em] text-[#121212] xl:text-16 xl:leading-28 xl:tracking-[0.025em] mt-[15px]">Link:</p>
+                <div class="flex mt-[8px]">
+                    <!-- Inputveld voor de volledige URL -->
+                    <input class="w-[calc(100%-52px)] h-[52px] flex items-center bg-[#f3f3f3] px-[15px]" type="text" id="urlInput" value="<?php echo htmlspecialchars("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>" readonly>
+                    <!-- Knop om de URL naar klembord te kopiëren -->
+                    <button class="flex justify-center items-center h-[52px] w-[52px] bg-[#f3f3f3]" onclick="copyToClipboard()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.7" height="20" viewBox="0 0 25.7 20">
+                            <path id="link-solid" d="M41.723,31.342A6.149,6.149,0,0,0,33.8,21.991l-.068.047a1.359,1.359,0,1,0,1.582,2.211l.068-.047A3.427,3.427,0,0,1,39.8,29.416L35.025,34.2a3.427,3.427,0,0,1-5.214-4.414l.047-.068a1.359,1.359,0,0,0-2.211-1.582L27.6,28.2a6.146,6.146,0,0,0,9.347,7.918Zm-22.1-1A6.149,6.149,0,0,0,27.549,39.7l.068-.047a1.359,1.359,0,1,0-1.582-2.211l-.068.047a3.429,3.429,0,0,1-4.414-5.218l4.771-4.776a3.429,3.429,0,0,1,5.214,4.418l-.047.068A1.359,1.359,0,1,0,33.7,33.562l.047-.068A6.147,6.147,0,0,0,24.4,25.572Z" transform="translate(-17.825 -20.845)"/>
+                        </svg>
+                    </button>
+                </div>         
+            </div>
+        </div>
+    </div>
 </main>
 
 
@@ -591,6 +621,38 @@ if ( post_password_required() ) {
         });
     </script>
 
+    <script>
+function copyToClipboard() {
+    // Selecteer het inputveld
+    var input = document.getElementById("urlInput");
+    // Selecteer de tekst in het inputveld
+    input.select();
+    // Kopieer de geselecteerde tekst naar het klembord
+    document.execCommand("copy");
+    // Geef feedback dat de URL is gekopieerd
+    alert("URL has been copied to clipboard: " + input.value);
+}
+</script>
+
+
+<script>
+document.getElementById("share-button").addEventListener("click", function() {
+    // Toggle de klassen in het hoofdelement
+    document.querySelector("main").classList.toggle("share-open");
+    document.querySelector("main").classList.toggle("share-close");
+});
+
+document.getElementById("share-close-button").addEventListener("click", function() {
+    // Toggle de klassen in het hoofdelement
+    document.querySelector("main").classList.toggle("share-open");
+    document.querySelector("main").classList.toggle("share-close");
+});
+document.getElementById("share-button-mobile").addEventListener("click", function() {
+    // Toggle de klassen in het hoofdelement
+    document.querySelector("main").classList.toggle("share-open");
+    document.querySelector("main").classList.toggle("share-close");
+});
+</script>
 
 <?php
 get_footer( 'shop' );

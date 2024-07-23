@@ -64,3 +64,17 @@
 
 
 }
+
+
+main.share-close {
+    #share-section {
+        display: none;
+    }
+}
+
+main.share-open {
+    #share-section {
+        display: flex;
+        position: fixed;
+    }
+}
