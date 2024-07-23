@@ -562,7 +562,7 @@ if ( post_password_required() ) {
                 <p class="font-jost font-normal text-15 leading-26 tracking-[0.02em] text-[#121212] xl:text-16 xl:leading-28 xl:tracking-[0.025em] mt-[15px]">Link:</p>
                 <div class="flex mt-[8px]">
                     <!-- Inputveld voor de volledige URL -->
-                    <input class="w-[calc(100%-52px)] h-[52px] flex items-center bg-[#f3f3f3] px-[15px]" type="text" id="urlInput" value="<?php echo htmlspecialchars("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>" readonly>
+                    <input class="w-[calc(100%-52px)] h-[52px] flex items-center bg-[#f3f3f3] px-[15px]" type="text" id="urlInput" value="<?php echo htmlspecialchars("https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>" readonly>
                     <!-- Knop om de URL naar klembord te kopiëren -->
                     <button class="flex justify-center items-center h-[52px] w-[52px] bg-[#f3f3f3]" onclick="copyToClipboard()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25.7" height="20" viewBox="0 0 25.7 20">
