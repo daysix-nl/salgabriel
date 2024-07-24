@@ -49,21 +49,25 @@
     }
 }
 
-#product-img {
-    #hover-img {
-        opacity: 0;
-        transition: .5s ease;
-    }
-
-    &:hover {
+// LG
+@media (min-width: 1200px) {
+    #product-img {
         #hover-img {
-            opacity: 1;
+            opacity: 0;
             transition: .5s ease;
         }
+
+        &:hover {
+            #hover-img {
+                opacity: 1;
+                transition: .5s ease;
+            }
+        }
+
+
     }
-
-
 }
+
 
 
 main.share-close {

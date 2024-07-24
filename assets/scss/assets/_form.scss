@@ -150,31 +150,33 @@
     }
 
     input {
-        height: 59px !important;
+        height: 40px !important;
         width: 100% !important;
-        border: 1px solid #A7A7A7 !important;
-        border-radius: 4px !important;
+        border: 0px solid #A7A7A7 !important;
+        border-bottom: 1px solid #1F1F1F !important;
+        border-radius: 0% !important;
         font-size: 12px !important;
-        padding-left: 24px !important;
-        padding-right: 110px !important;
+        padding-left: 0px !important;
+        padding-right: 80px !important;
         background: transparent !important;
 
-        font-weight: 600 !important;
+        font-weight: 500 !important;
 
         &::placeholder {
             color: #A6A6A5 !important;
-            text-transform: uppercase !important;
+            text-transform: none !important;
+            font-weight: 600 !important;
         }
     }
 
     .gform_button {
         width: fit-content !important;
-        height: 59px !important;
+        height: 40px !important;
         border: 0px solid #A7A7A7 !important;
         font-size: 12px !important;
-        text-transform: uppercase !important;
+        text-transform: none !important;
         font-weight: 600 !important;
-        padding-right: 20px !important;
+        padding-right: 0px !important;
         cursor: pointer !important;
     }
 
@@ -197,6 +199,71 @@
         font-size: 12px !important;
         margin-block-start: 8px;
         padding: 0px !important;
+    }
+}
+
+// LG
+@media (min-width: 1200px) {
+    .newsletter {
+        * {
+            font-family: Jost, sans-serif !important;
+        }
+
+        position: relative;
+
+        label {
+            display: none !important;
+        }
+
+        input {
+            height: 59px !important;
+            width: 100% !important;
+            border: 1px solid #A7A7A7 !important;
+            border-radius: 4px !important;
+            font-size: 12px !important;
+            padding-left: 24px !important;
+            padding-right: 110px !important;
+            background: transparent !important;
+
+            font-weight: 600 !important;
+
+            &::placeholder {
+                color: #A6A6A5 !important;
+                text-transform: uppercase !important;
+            }
+        }
+
+        .gform_button {
+            width: fit-content !important;
+            height: 59px !important;
+            border: 0px solid #A7A7A7 !important;
+            font-size: 12px !important;
+            text-transform: uppercase !important;
+            font-weight: 600 !important;
+            padding-right: 20px !important;
+            cursor: pointer !important;
+        }
+
+        .gform_footer {
+            position: absolute !important;
+            top: 0px !important;
+            right: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .gform_validation_errors {
+            display: none !important;
+        }
+
+        .gform_wrapper.gravity-theme .gfield_validation_message,
+        .gform_wrapper.gravity-theme .validation_message {
+            background: transparent !important;
+            border: 0px solid #c02b0a !important;
+            font-size: 12px !important;
+            margin-block-start: 8px;
+            padding: 0px !important;
+        }
     }
 }
 
