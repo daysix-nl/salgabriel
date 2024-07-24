@@ -1074,9 +1074,6 @@ video {
 .max-w-\[1500px\] {
   max-width: 1500px;
 }
-.max-w-\[246px\] {
-  max-width: 246px;
-}
 .max-w-\[262px\] {
   max-width: 262px;
 }
@@ -2004,10 +2001,6 @@ video {
     max-width: 553px;
   }
 
-  .md\:max-w-\[604px\] {
-    max-width: 604px;
-  }
-
   .md\:max-w-\[610px\] {
     max-width: 610px;
   }
@@ -2656,10 +2649,6 @@ video {
 
   .lg\:max-w-\[665px\] {
     max-width: 665px;
-  }
-
-  .lg\:max-w-\[685px\] {
-    max-width: 685px;
   }
 
   .lg\:max-w-\[726px\] {
