@@ -459,7 +459,7 @@ if ( post_password_required() ) {
                         <div class="panel">
                             <div class="pb-3 pr-2 md:pb-4 md:pr-3 lg:pb-4  lg:pr-4 grid gap-[20px] h-fit">
                                 <?php if (get_sub_field('text')): ?>   
-                                <div class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost lg:max-w-[685px] md:max-w-[604px] max-w-[246px] text-editor"><?php echo get_sub_field('text');?></div>
+                                <div class="text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost w-full text-editor"><?php echo get_sub_field('text');?></div>
                                 <?php endif; ?>
                                 
                             </div>
