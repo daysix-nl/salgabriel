@@ -680,6 +680,10 @@ video {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+.my-\[80px\] {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 .my-\[90px\] {
   margin-top: 90px;
   margin-bottom: 90px;
@@ -951,12 +955,6 @@ video {
 }
 .h-full {
   height: 100%;
-}
-.max-h-\[18px\] {
-  max-height: 18px;
-}
-.max-h-\[19px\] {
-  max-height: 19px;
 }
 .max-h-\[544px\] {
   max-height: 544px;
@@ -2851,6 +2849,10 @@ video {
 
   .lg\:text-20 {
     font-size: 20px;
+  }
+
+  .lg\:text-22 {
+    font-size: 22px;
   }
 
   .lg\:text-55 {

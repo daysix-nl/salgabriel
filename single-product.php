@@ -474,6 +474,40 @@ if ( post_password_required() ) {
         </div>
     </section>
 
+    <section>
+        <hr class="border-[#DDDDDD] my-[80px]">
+        <div class="container text-center mb-[40px]">
+            <h2 class="font-jost font-semibold text-18 leading-25 lg:text-22 lg:leading-25 text-[#000000] tracking-[0.025em]">Shop more</h2>
+        </div>
+         <div class="container grid grid-cols-2 lg:grid-cols-4 gap-x-[8px] md:gap-x-[20px] lg:gap-x-[30px] gap-y-[20px] lg:gap-y-[35px] mb-[90px] md:mb-[100px] lg:mb-[120px] xl:mb-[145px]">
+         <?php
+         // Huidige product uitsluiten
+            $current_product_id = $post->ID;
+            // Aangepaste query om alle producten op te halen
+            $args = array(
+                'post_type' => 'product', // Het posttype van producten
+                'posts_per_page' => 4,
+                    'post__not_in' => array($current_product_id), // Uitsluiten van het huidige product
+                'orderby' => 'rand', // Willekeurige volgorde (je kunt wijzigen naar andere orderby-opties)
+            );
+            $products_query = new WP_Query($args);
+            if ($products_query->have_posts()) :
+                while ($products_query->have_posts()) : $products_query->the_post();
+            // Informatie over het product ophalen
+            $product = wc_get_product(get_the_ID());
+            ?>
+                <?php include get_template_directory() . '/componenten/product-item.php'; ?>
+            <?php
+            endwhile;
+            // Herstel de oorspronkelijke query
+            wp_reset_postdata();
+        else :
+            echo 'Geen producten gevonden';
+        endif;
+        ?>
+    </div>
+    </section>
+
 
 
 
