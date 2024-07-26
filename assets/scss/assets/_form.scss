@@ -188,6 +188,10 @@
         padding: 0px !important;
     }
 
+    .gform_required_legend {
+        display: none !important;
+    }
+
     .gform_validation_errors {
         display: none !important;
     }
@@ -250,6 +254,10 @@
             right: 0px !important;
             margin: 0px !important;
             padding: 0px !important;
+        }
+
+        .gform_required_legend {
+            display: none !important;
         }
 
         .gform_validation_errors {
@@ -321,7 +329,9 @@
         }
     }
 
-
+    .gfield_required {
+        display: none !important;
+    }
 
     textarea {
         // height: 59px !important;
