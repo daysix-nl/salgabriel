@@ -1336,6 +1336,10 @@ video {
   -o-object-position: center;
      object-position: center;
 }
+.object-left {
+  -o-object-position: left;
+     object-position: left;
+}
 .p-0 {
   padding: 0;
 }

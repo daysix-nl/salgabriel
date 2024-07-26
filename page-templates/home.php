@@ -100,7 +100,7 @@
             <div class="w-full max-w-[360px] md:max-w-[340px] lg:max-w-[586px] xl:max-w-[588px] xl:mr-[93px] order-1 md:order-2">
                 <div class="relative h-[431px] md:h-[435px] lg:h-[689px] xl:h-[692px] w-full">
                     <div class="w-[262px] h-[344px] md:w-[243px] md:h-[323px] lg:w-[424px] lg:h-[633px] xl:w-[426px] xl:h-[636px] bg-black absolute top-0 left-0 overflow-hidden">
-                        <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/IMG_5129-scaled-e1721642796415.jpg" alt="" class="min-h-full min-w-full object-cover object-center">
+                        <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/IMG_5129-scaled-e1721642796415.jpg" alt="" class="min-h-full min-w-full object-cover object-left">
                     </div>
                     <div class="w-[167px] h-[249px] md:w-[193px] md:h-[288px] lg:w-[285px] lg:h-[427px] xl:w-[287px] xl:h-[429px] bg-black absolute right-[13px] md:right-0 bottom-0 overflow-hidden">
                         <img src="https://staging.salgabriel.com/wp-content/uploads/2024/07/IMG_5124-scaled.jpg" alt="" class="min-h-full min-w-full object-cover object-center">
