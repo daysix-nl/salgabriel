@@ -17,6 +17,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// Controleer of de winkelwagen leeg is
+if ( WC()->cart->is_empty() ) {
+    wp_safe_redirect( wc_get_page_permalink( 'shop' ) );
+    exit;
+}
+
+
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="lg:flex lg:justify-between lg:px-[30px] xl:px-[unset]">
@@ -159,26 +166,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php do_action( 'woocommerce_cart_contents' ); ?>
 
 				<tr class="w-full block mb-[30px] mt-[30pxl md:mb-[0px] lg:mt-[50px]">
+					
 					<td class="w-full block">
 
-						<?php if ( wc_coupons_enabled() ) { ?>
-							<div class="w-full block bg-[#fff] p-[15px] md:p-[0px] rounded-[0px] mt-[30px] md:mt-[unset]">
-								<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
-								<div class="coupon flex w-full">
-									 <input type="text" name="coupon_code" class="w-full bg-transparent border-l-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] px-[20px] text-[#121212] rounded-l-[4px] text-12 leading-15 font-jost font-semibold uppercase" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="w-[200px] bg-transparent border-r-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] uppercase text-12 leading-15 font-jost font-semibold text-[#000000] h-[47px] lg:h-[59px] rounded-r-[4px]" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">Add coupon</button>
-									<?php do_action( 'woocommerce_cart_coupon' ); ?>
-								</div>
-							</div>
-							
-						<?php } ?>
-						
-
-						<div class="absolute top-0 left-0 right-0">
-							<h1 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase">Cart</h1>
-							<hr class="border-[#DDDDDD] my-[10px]">
-						</div>
-						<div class="absolute bottom-[117px] md:bottom-[unset] md:top-0 right-0 flex justify-end w-[173px] h-[28px] items-center">
-							<button type="submit" class="update-cart items-center button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">
+				
+					<div class="absolute bottom-[15px] md:bottom-[unset] md:top-0 right-0 flex justify-end w-[173px] h-[28px] items-center z-[10]">
+						<button type="submit" class="update-cart items-center button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">
 							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="mr-[8px]">
 								<g id="renew-svgrepo-com" transform="translate(-0.672 -0.672)">
 									<path id="Path_585" data-name="Path 585" d="M7.909,6.413H5.358a5.375,5.375,0,0,1,9.879,2.932h.977A6.352,6.352,0,0,0,4.977,5.279v-1.8H4V7.39H7.909Z" transform="translate(-2.009 -1.49)" fill="#525252"/>
@@ -191,6 +184,16 @@ do_action( 'woocommerce_before_cart' ); ?>
 							Update cart
 						</button>
 						</div>
+							
+							
+					
+						
+
+						<div class="absolute top-0 left-0 right-0">
+							<h1 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase">Cart</h1>
+							<hr class="border-[#DDDDDD] my-[10px]">
+						</div>
+						
 						
 							
 
@@ -205,12 +208,31 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</table>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 		</div>
+		<div class="coupon">
+			<div class="accordion-item"> 
+				<div class="accordion text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost px-2 md:pr-3 lg:px-4 py-2">
+					<span class="pr-2">Do you have a coupon code? Click <b>here</b> to apply it</span>
+				</div>
+				<div class="panel bg-[#F7F7F7]">
+					<div class="pb-3 px-2 md:pb-4 md:pr-3 lg:pb-4  lg:px-4">
+						<div class="w-full block p-[0px] md:p-[0px] rounded-[0px]">
+							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
+							<div class="coupon flex w-full">
+								<input type="text" name="coupon_code" class="w-full bg-[#F7F7F7] border-l-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] px-[20px] text-[#121212] rounded-l-[4px] text-12 leading-15 font-jost font-semibold uppercase" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="w-[200px] bg-[#F7F7F7] border-r-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] uppercase text-12 leading-15 font-jost font-semibold text-[#000000] h-[47px] lg:h-[59px] rounded-r-[4px]" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">Apply coupon</button>
+								<?php do_action( 'woocommerce_cart_coupon' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</form>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
 	<div class="bg-white h-fit w-full lg:max-w-[337px] xl:max-w-[381px]">
-		<div class="sticky mt-[10px] md:mt-[50px] lg:mt-[unset] lg:top-[168px] xl:top-[193px]">
+		<div class="sticky mt-[50px] md:mt-[50px] lg:mt-[unset] lg:top-[168px] xl:top-[193px]">
 			 <div class="flex items-center justify-between w-full">
 				<div class="flex items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" width="19.995" height="19.315" viewBox="0 0 19.995 19.315">

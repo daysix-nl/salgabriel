@@ -750,3 +750,11 @@ add_action('woocommerce_add_to_cart', 'na_toevoegen_aan_winkelwagen', 10, 6);
 
 
 
+function redirect_if_cart_empty() {
+    // Controleer of we op de winkelwagenpagina zijn en de winkelwagen leeg is
+    if ( is_cart() && WC()->cart->is_empty() ) {
+        wp_safe_redirect( wc_get_page_permalink( 'shop' ) );
+        exit;
+    }
+}
+add_action( 'template_redirect', 'redirect_if_cart_empty' );
