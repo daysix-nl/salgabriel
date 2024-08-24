@@ -1,126 +1,121 @@
-<div id="sidecart-menu" class="sidecart-hidden fixed top-0 right-0 bottom-0 w-full md:w-[389px] xl:w-[436px] bg-white z-[99999]">
-    <div class="w-full mx-auto px-[20px] lg:px-[25px] h-[100dvh] flex flex-col justify-between">
-        <!-- HEADER -->
-        <div class="">
-            <div class="flex items-center justify-between w-full pt-[30px]">
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.995" height="19.315" viewBox="0 0 19.995 19.315">
-                        <path id="shopping-bag" d="M22.294,10.058a.649.649,0,0,0-.514-.262H18.373A5.222,5.222,0,0,0,13.387,5H12.044A5.222,5.222,0,0,0,7.059,9.8H3.651a.647.647,0,0,0-.522.26.791.791,0,0,0-.15.607l1.8,11.178a2.253,2.253,0,0,0,2.152,1.974H18.5a2.254,2.254,0,0,0,2.152-1.977l1.8-11.175A.789.789,0,0,0,22.294,10.058ZM12.044,6.476h1.343A3.806,3.806,0,0,1,17.017,9.8h-8.6A3.806,3.806,0,0,1,12.044,6.476Zm7.289,15.1a.868.868,0,0,1-.833.76H6.931a.868.868,0,0,1-.829-.756L4.45,11.272H20.982Z" transform="translate(-2.717 -4.75)" stroke="#000" stroke-width="0.5"/>
-                    </svg>
-                    <h3 class="font-jost font-semibold text-15 leading-20 xl:text-17 xl:leading-25 tracking-[0.05em] text-[#000000] uppercase ml-[15px]">Shopping bag</h3>
-                </div>
-                <button id="sidecart-close" class="z-[9999]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.999" height="13.999" viewBox="0 0 13.999 13.999">
-                        <g id="close-svgrepo-com" transform="translate(-6.439 -6.439)">
-                            <path id="Path_18" data-name="Path 18" d="M7.5,7.5,19.378,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                            <path id="Path_19" data-name="Path 19" d="M19.378,7.5,7.5,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <hr class="border-[#DDDDDD] mt-[20px]">
-        </div>
-        <!-- PRODUCTS -->
-        <div class="w-full h-full overflow-y-auto">
-            <div class="w-full mb-[20px]">
-                <!-- WINKELWAGEN ITEM -->
-                <?php
-                // Haal de inhoud van de winkelwagen op
-                $cart = WC()->cart->get_cart();
-                if (!empty($cart)) {
-                    foreach ($cart as $cart_item_key => $cart_item) {
-                        $product = $cart_item['data'];
-                        $product_id = $product->is_type('variation') ? $product->get_parent_id() : $product->get_id();
-                        // Haal de productafbeelding op
-                        $product_image = wp_get_attachment_image_src(get_post_thumbnail_id($product_id), 'full'); ?>
-                        <div class="flex items-center w-full justify-between mt-[20px]">
-                            <!-- AFBEELDING -->
-                            <a href="<?php the_permalink($product->get_id());?>" class="w-[81px] h-[81px] xl:w-[90px] xl:h-[90px] overflow-hidden">
-                                <?php
-                                if ($product_image) {
-                                echo '<img class="min-h-full min-w-full object-cover object-center mix-blend-multiply" src="' . esc_url($product_image[0]) . '" alt="' . esc_attr($product->get_name()) . '"/>';
-                                }
-                                ?>
-                            </a>
-                            <!-- INFORMATIE -->
-                            <div class="w-[calc(100%-100px)] md:w-[calc(100%-115px)] xl:w-[calc(100%-130px)]">
-                                <div class="flex flex-col justify-between h-full"> 
-                                    <div class="w-full">
-                                        <div class="flex justify-between items-start">
-                                            <div class="w-auto">
-                                                <a href="<?php the_permalink($product->get_id());?>" class="font-jost font-semibold text-16 leading-20 xl:text-18 xl:leading-20 tracking-[0.05em]"><?php echo esc_html($product->get_name()); ?></a>
-                                                <p class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-28 tracking-[0.025em] text-[#000]"><?php echo $cart_item['quantity'];?> x <?php echo wc_price($product->get_price());?></p>
-                                            </div>
-                                            <?php echo '<a class="remove-item" href="' . esc_url(WC()->cart->get_remove_url($cart_item_key)) . '">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16.1" viewBox="0 0 14 16.1">
-                                                <g id="bin-delete-recycle-svgrepo-com" transform="translate(-4 -1)">
-                                                    <path id="Path_496" data-name="Path 496" d="M17.3,1.7H12.4a.7.7,0,0,0-.7-.7H10.3a.7.7,0,0,0-.7.7H4.7a.7.7,0,0,0,0,1.4H17.3a.7.7,0,1,0,0-1.4Z" fill="#acacac"/>
-                                                    <path id="Path_497" data-name="Path 497" d="M17.5,9.7V20.9H8.4V9.7H7V21.6a.7.7,0,0,0,.7.7H18.2a.7.7,0,0,0,.7-.7V9.7Z" transform="translate(-1.95 -5.2)" fill="#acacac"/>
-                                                    <path id="Path_498" data-name="Path 498" d="M18.4,24.7v-7H17v7Z" transform="translate(-8.45 -11.1)" fill="#acacac"/>
-                                                    <path id="Path_499" data-name="Path 499" d="M28.4,24.7v-7H27v7Z" transform="translate(-14.95 -11.1)" fill="#acacac"/>
-                                                </g>
-                                            </svg>
-                                            </a>';?>
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                } else { ?>
-                    <p class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-28 tracking-[0.025em] text-[#000] mt-[20px]">Your shopping bag is empty</p>
-                    <?php
-                }
-                ?>
-            </div>
-        </div>
-        <?php
-        if (WC()->cart->get_cart_contents_count() > 0) { ?>
-        <!-- FOOTER -->
-        <div class="w-full mb-3">
-            <hr class="border-[#DDDDDD] mb-[20px]">
-            <div class="">
-                <div class="flex justify-between">
-                    <h4 class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">Subtotal</h4>
-                    <p class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 tracking-[0.05em] text-[#000]">
-                       <?php wc_cart_totals_subtotal_html(); ?>
-                    </p>
-                </div>
-                <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-                    <div class="flex justify-between lg:mt-[8px]">
-                    <h4 class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]"><?php wc_cart_totals_coupon_label( $coupon ); ?></h4>
-                    <p class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">
-                        <?php wc_cart_totals_coupon_html( $coupon ); ?>
-                    </p>
-                </div>
-                <?php endforeach; ?>
-                <div class="flex justify-between lg:mt-[8px]">
-                    <h4 class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">Shipping</h4>
-                    <p class="font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">
-                        <?php
-                        $verzendkosten = WC()->cart->shipping_total;
+<?php
+/**
+ * Cart totals
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://woo.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 2.3.6
+ */
 
-                        if ($verzendkosten >= 1) {
-                            echo '' . wc_price($verzendkosten);
-                        } else {
-                            echo '<span class="text-[#000] tracking-[0.05em]">Free</span>';
-                        }
-                        ?>
-                    </p>
-                </div>
-                <div class="flex justify-between lg:mt-[8px]">
-                    <h4 class="font-jost font-semibold text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">Total</h4>
-                    <p class="font-jost font-semibold text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] tracking-[0.05em]">
-                        <?php
-                        $total_bedrag = WC()->cart->total;
-                        echo '' . wc_price($total_bedrag);
-                        ?>
-                    </p>
-                </div>
-            </div>
-            <hr class="border-[#DDDDDD] my-[20px]">
-            <div class="w-full mx-auto flex justify-between max-w-[360px] md:max-w-[367px] xl:max-w-[398.91px]">
+defined( 'ABSPATH' ) || exit;
+
+?>
+<div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+
+	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
+
+	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+
+	<table cellspacing="0" class="shop_table shop_table_responsive">
+
+		<tr class="cart-subtotal">
+			<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+		</tr>
+
+		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+			</tr>
+		<?php endforeach; ?>
+
+		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+
+			<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
+
+			<tr class="woocommerce-shipping-totals shipping">
+				<th>Shipping</th>
+				<td data-title="Shipping"><?php
+				$verzendkosten = WC()->cart->shipping_total;
+
+				if ($verzendkosten >= 1) {
+					echo '' . wc_price($verzendkosten);
+				} else {
+					echo '<span class="text-[#000]">Free</span>';
+				}
+				?></td>
+
+				</tr>
+
+			<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
+
+		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
+
+			<tr class="shipping">
+				<th>Shipping</th>
+				<td data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
+			</tr>
+
+		<?php endif; ?>
+
+		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+			<tr class="fee">
+				<th><?php echo esc_html( $fee->name ); ?></th>
+				<td data-title="<?php echo esc_attr( $fee->name ); ?>"><?php wc_cart_totals_fee_html( $fee ); ?></td>
+			</tr>
+		<?php endforeach; ?>
+
+		<?php
+		if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) {
+			$taxable_address = WC()->customer->get_taxable_address();
+			$estimated_text  = '';
+
+			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) {
+				/* translators: %s location. */
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+			}
+
+			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
+				foreach ( WC()->cart->get_tax_totals() as $code => $tax ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					?>
+					<tr class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+						<th><?php echo esc_html( $tax->label ) . $estimated_text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
+						<td data-title="<?php echo esc_attr( $tax->label ); ?>"><?php echo wp_kses_post( $tax->formatted_amount ); ?></td>
+					</tr>
+					<?php
+				}
+			} else {
+				?>
+				<tr class="tax-total">
+					<th><?php echo esc_html( WC()->countries->tax_or_vat() ) . $estimated_text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
+					<td data-title="<?php echo esc_attr( WC()->countries->tax_or_vat() ); ?>"><?php wc_cart_totals_taxes_total_html(); ?></td>
+				</tr>
+				<?php
+			}
+		}
+		?>
+
+		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
+
+		<tr class="order-total">
+			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+		</tr>
+
+		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+
+	</table>
+	<hr class="border-[#DDDDDD] my-[20px]">
+	<div class="w-full mx-auto flex justify-between max-w-[360px] md:max-w-[unset]">
                 <div class="border-[#EDEDED] border-[1px] rounded-[4px] h-[23px] w-[36.64px] overflow-hidden flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19.474" height="6.247" viewBox="0 0 19.474 6.247">
                         <g id="Group_75" data-name="Group 75" transform="translate(0 0)">
@@ -195,15 +190,36 @@
                     </svg>
 
                 </div>
-                <div class="border-[#EDEDED] border-[1px] rounded-[4px] h-[23px] w-[36.64px] overflow-hidden flex justify-center items-center bg-[#FEB3C7]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25.052" height="5.579" viewBox="0 0 25.052 5.579">
-                    <path id="Path_54" data-name="Path 54" d="M28.751,12.531a.72.72,0,0,0-.506.21.712.712,0,0,0,0,1,.714.714,0,0,0,1.219-.5.7.7,0,0,0-.207-.5.72.72,0,0,0-.506-.21Zm-2.347-.55a1.031,1.031,0,1,0-1.029.974,1,1,0,0,0,1.029-.974Zm0-1.894h1.136v3.787H26.409v-.242a2,2,0,1,1,0-3.3Zm-9.093.493v-.493H16.152v3.786h1.166V12.107c0-.6.648-.917,1.1-.917h.013v-1.1A1.418,1.418,0,0,0,17.316,10.581Zm-2.9,1.4a1.031,1.031,0,1,0-1.029.974A1,1,0,0,0,14.418,11.982Zm0-1.894h1.137v3.787H14.422v-.242a2,2,0,1,1,0-3.3Zm6.839-.1a1.383,1.383,0,0,0-1.171.528v-.426H18.959v3.786H20.1v-1.99a.8.8,0,0,1,.853-.858.741.741,0,0,1,.787.85v2h1.135V11.467A1.5,1.5,0,0,0,21.261,9.987ZM9.638,13.875h1.189V8.4H9.638Zm-5.225,0h1.26V8.4H4.414ZM8.819,8.4A4.35,4.35,0,0,1,7.53,11.508l1.741,2.368H7.716L5.825,11.3l.488-.365A3.142,3.142,0,0,0,7.585,8.4H8.818Z" transform="translate(-4.413 -8.4)" fill="#0a0b09"/>
+                <div class="border-[#EDEDED] border-[1px] rounded-[4px] h-[23px] w-[36.64px] overflow-hidden flex justify-center items-center bg-[#fff]">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="23" viewBox="0 0 35 23">
+                        <defs>
+                            <clipPath id="clip-path">
+                            <rect id="Rectangle_685" data-name="Rectangle 685" width="35" height="23" transform="translate(-0.175 2263.077)" fill="#fff"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0.175 -2263.077)" clip-path="url(#clip-path)">
+                            <g id="riverty-checkout-logo" transform="translate(0.117 2263.573)">
+                            <rect id="Rectangle_790" data-name="Rectangle 790" width="35.001" height="21.779" fill="#282828"/>
+                            <rect id="Rectangle_791" data-name="Rectangle 791" width="35.001" height="10.889" fill="#255a57"/>
+                            <path id="Path_837" data-name="Path 837" d="M389.543,91.185c-.012-.05-.027-.093-.038-.131l-.012-.035a1.25,1.25,0,0,0-1.215-.881,1.182,1.182,0,0,0-.269.027,1.262,1.262,0,0,0-.98,1.421v1.569a.472.472,0,0,0,.054.231.278.278,0,0,0,.171.135.3.3,0,0,0,.064.008.248.248,0,0,0,.156-.05.367.367,0,0,0,.118-.336V91.586c0-.525.163-.78.543-.858a.658.658,0,0,1,.661.216.677.677,0,0,1,.141.259,1.155,1.155,0,0,0,.126.417l.012.015a.3.3,0,0,0,.353.062C389.6,91.6,389.581,91.374,389.543,91.185Z" transform="translate(-369.391 -86.03)" fill="#fff"/>
+                            <path id="Path_838" data-name="Path 838" d="M104.261,68.368a1.554,1.554,0,0,0-.627,0,1.51,1.51,0,0,0-1.234,1.537V72.35a.482.482,0,0,0,.042.228l0,0a.278.278,0,0,0,.171.135.26.26,0,0,0,.22-.043.38.38,0,0,0,.141-.336v-.985h1.945v.992a.5.5,0,0,0,.054.231.278.278,0,0,0,.171.135.3.3,0,0,0,.064.008.249.249,0,0,0,.156-.05.368.368,0,0,0,.129-.336V69.9A1.511,1.511,0,0,0,104.261,68.368Zm.657,2.437h-1.937v-.9a.928.928,0,0,1,.425-.849.968.968,0,0,1,.741-.151.8.8,0,0,1,.341.146l0,0a.944.944,0,0,1,.425.849v.9Z" transform="translate(-97.733 -65.222)" fill="#fff"/>
+                            <path id="Path_839" data-name="Path 839" d="M306.312,91.932a1.754,1.754,0,0,0-3.213-.379,1.794,1.794,0,0,0-.118,1.4,1.668,1.668,0,0,0,1.618,1.162,1.9,1.9,0,0,0,.41-.046,1.8,1.8,0,0,0,.6-.255,1.457,1.457,0,0,0,.311-.271.438.438,0,0,0,.141-.317.275.275,0,0,0-.1-.186.268.268,0,0,0-.213-.05l-.012,0a.42.42,0,0,0-.175.1l-.049.062-.072.065,0,0a1.1,1.1,0,0,1-.562.317,1.135,1.135,0,0,1-1.329-.723c-.015-.046-.027-.088-.038-.128h2.484l.054-.008.084,0a.26.26,0,0,0,.205-.108C306.411,92.457,306.406,92.279,306.312,91.932Zm-2.819.239a1.016,1.016,0,0,1,.038-.143,1.14,1.14,0,0,1,1.436-.776,1.167,1.167,0,0,1,.794.846c.008.031.015.062.019.093Z" transform="translate(-289.088 -86.526)" fill="#fff"/>
+                            <path id="Path_840" data-name="Path 840" d="M244.229,91.837a.27.27,0,0,0-.16-.139.284.284,0,0,0-.217.023.339.339,0,0,0-.167.263l-.023.123,0,.038a.656.656,0,0,1-.778.533c-.251-.038-.585-.174-.585-.876v-.046h.76c.091,0,.368,0,.368-.278a.258.258,0,0,0-.224-.263,1.169,1.169,0,0,0-.163-.008h-.741v-1.07a.483.483,0,0,0-.042-.228v0a.278.278,0,0,0-.171-.135.26.26,0,0,0-.22.043.368.368,0,0,0-.129.336v1.595c0,.908.323,1.363,1.049,1.483a1.4,1.4,0,0,0,.251.023,1.218,1.218,0,0,0,1.2-.931c.012-.046.019-.088.027-.131v0A.542.542,0,0,0,244.229,91.837Z" transform="translate(-230.716 -85.671)" fill="#fff"/>
+                            <path id="Path_841" data-name="Path 841" d="M528.622,91.8a1.555,1.555,0,0,0-.061-.374,1.634,1.634,0,0,0-.778-.981,1.737,1.737,0,0,0-1.356-.139,1.744,1.744,0,0,0,.015,3.333,1.879,1.879,0,0,0,.482.062,1.68,1.68,0,0,0,.691-.146,1.416,1.416,0,0,0,.452-.321v.008a.5.5,0,0,0,.03.228l0,0a.278.278,0,0,0,.171.135.26.26,0,0,0,.22-.043.376.376,0,0,0,.136-.336V91.866Zm-1.429,1.316a1.123,1.123,0,0,1-1.375-.826v0a1.074,1.074,0,0,1-.045-.243,1.174,1.174,0,0,1,.8-1.209,1.235,1.235,0,0,1,.368-.058,1.113,1.113,0,0,1,.654.208,1.172,1.172,0,0,1,.479.931A1.14,1.14,0,0,1,527.193,93.117Z" transform="translate(-501.268 -86.116)" fill="#fff"/>
+                            <path id="Path_842" data-name="Path 842" d="M460.438,68.8a1.456,1.456,0,0,0-1.158-.533,1.437,1.437,0,0,0-1.432,1.569V72.28a.472.472,0,0,0,.054.231.278.278,0,0,0,.171.135.3.3,0,0,0,.064.008.249.249,0,0,0,.156-.05.374.374,0,0,0,.133-.336V71.159h.832a1.378,1.378,0,0,0,1.469-1.143A1.464,1.464,0,0,0,460.438,68.8Zm-1.185,1.808h-.012l-.809-.012v-.811a.875.875,0,0,1,.224-.711.835.835,0,0,1,.649-.259.861.861,0,0,1,.866.911A.87.87,0,0,1,459.252,70.607Z" transform="translate(-436.981 -65.155)" fill="#fff"/>
+                            <path id="Path_843" data-name="Path 843" d="M613.973,92.2a.278.278,0,0,0-.171-.135.26.26,0,0,0-.22.043.369.369,0,0,0-.126.336V94a.918.918,0,0,1-.254.7.677.677,0,0,1-.562.146.7.7,0,0,1-.6-.8V92.441a.533.533,0,0,0-.038-.231.278.278,0,0,0-.171-.135.26.26,0,0,0-.22.043.377.377,0,0,0-.136.336v1.614a1.251,1.251,0,0,0,1.975,1.127v.012a.681.681,0,0,1-.524.625.643.643,0,0,1-.459-.031.606.606,0,0,1-.228-.181l-.084-.108-.054-.062a.387.387,0,0,0-.076-.081l-.015-.015L612,95.346a.266.266,0,0,0-.251-.012.282.282,0,0,0-.16.205.51.51,0,0,0,.118.363l0,0a1.343,1.343,0,0,0,.247.263,1.2,1.2,0,0,0,.76.251,1.5,1.5,0,0,0,.365-.046,1.3,1.3,0,0,0,.95-1.4V92.441a.445.445,0,0,0-.049-.228Z" transform="translate(-583.607 -87.865)" fill="#fff"/>
+                            <path id="Path_844" data-name="Path 844" d="M181.634,91.054l-.012-.035a1.25,1.25,0,0,0-1.215-.881,1.157,1.157,0,0,0-.269.027,1.262,1.262,0,0,0-.98,1.421v1.569a.471.471,0,0,0,.054.228v0a.278.278,0,0,0,.171.135.3.3,0,0,0,.064.008.249.249,0,0,0,.156-.05.371.371,0,0,0,.129-.336v-.371l-.012-.653h.809c.266,0,.331-.139.338-.259a.268.268,0,0,0-.064-.2.355.355,0,0,0-.274-.093h-.813c0-.51.167-.761.543-.842a.658.658,0,0,1,.661.216.7.7,0,0,1,.141.259,1.154,1.154,0,0,0,.126.417l.012.015a.3.3,0,0,0,.353.062c.178-.1.16-.324.121-.514A.927.927,0,0,0,181.634,91.054Z" transform="translate(-170.993 -86.03)" fill="#fff"/>
+                            <path id="Path_845" data-name="Path 845" d="M673.588,71.364a.417.417,0,0,0-.593,0,.435.435,0,0,0,0,.6.389.389,0,0,0,.3.128.4.4,0,0,0,.3-.128.429.429,0,0,0,.121-.3A.4.4,0,0,0,673.588,71.364Zm-.046.56a.337.337,0,0,1-.254.108.342.342,0,0,1-.254-.108.373.373,0,0,1,0-.522.354.354,0,0,1,.254-.108.342.342,0,0,1,.254.108.349.349,0,0,1,.106.259A.369.369,0,0,1,673.542,71.924Z" transform="translate(-642.209 -67.994)" fill="#fff"/>
+                            <path id="Path_846" data-name="Path 846" d="M678.629,75.447a.119.119,0,0,0-.072-.12.336.336,0,0,0-.125-.015h-.16v.467h.084v-.186h.064a.186.186,0,0,1,.091.015.125.125,0,0,1,.042.108v.062h.076l0,0s0-.012,0-.023v-.07a.146.146,0,0,0-.027-.073.139.139,0,0,0-.079-.046.158.158,0,0,0,.069-.023A.1.1,0,0,0,678.629,75.447Zm-.129.081a.184.184,0,0,1-.076.012h-.072v-.17h.069a.2.2,0,0,1,.1.02.066.066,0,0,1,.03.066A.076.076,0,0,1,678.5,75.528Z" transform="translate(-647.359 -71.879)" fill="#fff"/>
+                            <path id="Path_847" data-name="Path 847" d="M128.068,326.4l-1.21,1.607v1.307h-.666v-1.307l-1.21-1.607h.825l.736.99.731-.99Zm-6.737,0v.576H122.4v2.34h.66v-2.341h1.065V326.4Zm-3.3.576h.982c.292,0,.427.111.427.347s-.136.347-.427.347h-.982Zm2.222,2.34-.758-1.123a.809.809,0,0,0,.618-.87c0-.6-.36-.921-1.028-.921H117.37v2.914h.66v-1.073h.728l.715,1.072Zm-7.306-2.914v2.914h2.6v-.576h-1.941v-.6h1.668v-.576h-1.668v-.586h1.942V326.4Zm-2.07,0-.849,2.155-.855-2.155h-.716l1.214,2.914h.677l1.214-2.914Zm-4.473,2.913h.66V326.4h-.66Zm-4,0h.66v-2.246h-.66Zm.66-2.246h2.217V326.4H103.06Z" transform="translate(-97.733 -311.524)" fill="#e7e4e2"/>
+                            </g>
+                        </g>
                     </svg>
                 </div>
             </div>
-            <hr class="border-[#DDDDDD] my-[20px]">
-            <div class="w-full grid gap-[8px]">
-                <!-- USP'S -->
+            <hr class="border-[#DDDDDD] mt-[20px] mb-[30px]">
+			<div class="w-full grid gap-[15px] mt-4">
+                            <!-- USP'S -->
                 <div class="flex items-start">
                     <div class="w-[37px] h-[28px] flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18.75" height="13.5" viewBox="0 0 18.75 13.5">
@@ -228,16 +244,13 @@
                     </div>
                     <p class="text-[#3C3C3C] text-15 leading-25 xl:text-16 xl:leading-28 font-jost w-full tracking-[0.025em]">Signature packaging</p>
                 </div>
-            </div>
-            <hr class="border-[#DDDDDD] my-[20px]">
-            <?php $checkout_url = wc_get_checkout_url();?>
-            <a href="<?php echo esc_url($checkout_url);?>" class="h-[55px] md:h-[47px] xl:h-[52px] bg-[#2E2E2E] rounded-[2px] xl:rounded-[3px] font-jost font-normal text-white text-15 xl:text-16 tracking-[0.02em] xl:tracking-[0.025em] w-full flex items-center justify-center md:hover:opacity-80 duration-300">Complete order</a>
-            <a href="/cart/" class="text-center underline font-jost font-normal text-15 leading-25 xl:text-16 xl:leading-25 text-[#000] w-full flex items-center justify-center mt-[15px]">View cart</a>
-        </div>
-        <?php
-        } else {
-        }
-        ?>
-    </div>
+                        </div>
+			<hr class="border-[#DDDDDD] my-[30px]">
+
+	
+		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+
+
+	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
+
 </div>
-<div class="sidecart-overlay"></div>

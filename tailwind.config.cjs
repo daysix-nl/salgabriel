@@ -9,6 +9,7 @@ module.exports = {
     "./wc-templates/*.{html,js,php}",
     "./woocommerce/*.{html,js,php}",
     "./woocommerce/checkout/*.{html,js,php}",
+    "./woocommerce/cart/*.{html,js,php}",
     "./woocommerce/global/*.{html,js,php}",
     "./woocommerce/single-product/add-to-cart/*.{html,js,php}",
   ],
