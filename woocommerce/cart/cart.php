@@ -217,8 +217,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<div class="pb-3 px-2 md:pb-4 md:pr-3 lg:pb-4  lg:px-4">
 						<div class="w-full block p-[0px] md:p-[0px] rounded-[0px]">
 							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
-							<div class="coupon flex w-full">
-								<input type="text" name="coupon_code" class="w-full bg-[#F7F7F7] border-l-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] px-[20px] text-[#121212] rounded-l-[4px] text-12 leading-15 font-jost font-semibold uppercase" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="w-[200px] bg-[#F7F7F7] border-r-[1px] border-t-[1px] border-b-[1px] border-[#a7a7a7] uppercase text-12 leading-15 font-jost font-semibold text-[#000000] h-[47px] lg:h-[59px] rounded-r-[4px]" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">Apply coupon</button>
+							<div class="coupon flex w-full border-[1px] border-[#a7a7a7] rounded-[4px] p-[1px]">
+								<input type="text" name="coupon_code" class="w-full bg-[#F7F7F7] px-[20px] text-[#121212] text-12 leading-15 font-jost font-semibold uppercase" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="w-[200px] bg-[#F7F7F7] uppercase text-12 leading-15 font-jost font-semibold text-[#000000] h-[47px] lg:h-[59px]" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">Apply coupon</button>
 								<?php do_action( 'woocommerce_cart_coupon' ); ?>
 							</div>
 						</div>
