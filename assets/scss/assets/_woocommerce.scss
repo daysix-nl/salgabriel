@@ -274,12 +274,13 @@
     .woocommerce-error,
     .woocommerce-info,
     .woocommerce-message {
+        width: 100% !important;
         padding: 1em 2em 1em 3.5em;
         margin: 0 0 2em;
         position: relative;
         background-color: #f7f7f7 !important;
         color: #000 !important;
-        border-top: 3px solid #f7f7f7 !important;
+        border-top: 0px solid #f7f7f7 !important;
         list-style: none outside;
         width: auto;
         word-wrap: break-word;
