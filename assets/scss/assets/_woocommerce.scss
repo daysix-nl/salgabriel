@@ -732,3 +732,25 @@ button.update-cart {
 .single-product .input-quantity {
     display: none !important;
 }
+
+
+.mollie-components .mollie-component-label {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+.mollie-components .mollie-component {
+    border: 1px solid #dedede !important;
+    height: 53px !important;
+    padding-left: 10px !important;
+    border-radius: 0px !important;
+    box-shadow: unset !important;
+    color: #000 !important;
+}
+
+.mollie-components .mollie-component iframe {
+    border-radius: 0px !important;
+    margin: 0;
+    margin-top: 18.5px !important;
+    margin-left: 12px !important;
+}
