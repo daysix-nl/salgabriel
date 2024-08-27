@@ -751,6 +751,13 @@ button.update-cart {
 .mollie-components .mollie-component iframe {
     border-radius: 0px !important;
     margin: 0;
-    padding-top: 18.5px !important;
+    margin-top: 18.5px !important;
     padding-left: 12px !important;
+}
+
+#add_payment_method #payment div.payment_box p:last-child,
+.woocommerce-cart #payment div.payment_box p:last-child,
+.woocommerce-checkout #payment div.payment_box p:last-child {
+    margin-bottom: 0;
+    margin-top: 30px !important;
 }
