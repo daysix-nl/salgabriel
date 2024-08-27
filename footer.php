@@ -14,7 +14,7 @@
                 <h3 class="font-syne font-bold text-14 leading-22 tracking-[0.06em] text-[#000] uppercase mb-[20px] xl:mb-[25px]">Explore</h3>
                 <div class="grid h-fit">
                     <a href="/shop/" class="hoveropacity font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Shop</a>
-                    <a href=/craft/" class="hoveropacity font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Craft</a>
+                    <a href="/craft/" class="hoveropacity font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Craft</a>
                     <a href="/wishlist/" class="hoveropacity font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Favorites</a>
                     <a href="/learn/" class="hoveropacity font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Learn</a>
                 </div>
