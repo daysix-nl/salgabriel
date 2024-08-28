@@ -1,5 +1,5 @@
 <div id="search-bg" class="fixed top-0 left-0 right-0 bottom-0 z-[9999] hidden lg:block"></div>
-<div id="search-content" class="fixed top-0 left-0 right-0 bottom-0 z-[9999]">
+<div id="search-content" class="fixed top-0 left-0 right-0 bottom-0 z-[9999] hidden lg:block ">
     <section class="h-[30px] md:h-[35px]"></section>
     <section id="search-navbar" class="h-[78px] xl:h-[88px] w-full flex items-center justify-between px-[15px] md:px-[25px] lg:px-[55px] max-w-[1500px] mx-auto top-0">
         <div class="w-[65px] md:w-[167px] lg:w-[320px]">
