@@ -162,7 +162,7 @@ defined( 'ABSPATH' ) || exit;
 									</p>
 								</div>
 								<div class="flex justify-between lg:mt-[8px]">
-									<h4 class="font-jost font-medium text-15 leading-25 text-[#000]">TAX</h4>
+									<h4 class="font-jost font-medium text-15 leading-25 text-[#000]">VAT</h4>
 									<p class="font-jost font-medium text-15 leading-25 text-[#000]">
 										<?php echo wc_price( $order->get_total_tax() ); ?>
 									</p>
