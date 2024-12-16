@@ -505,3 +505,35 @@ function redirect_if_cart_empty() {
     }
 }
 add_action( 'template_redirect', 'redirect_if_cart_empty' );
+
+
+
+
+// Voeg een nieuwe orderstatus toe
+add_action('init', 'register_shipped_order_status');
+function register_shipped_order_status() {
+    register_post_status('wc-shipped', array(
+        'label'                     => 'Shipped',
+        'public'                    => true,
+        'exclude_from_search'       => false,
+        'show_in_admin_all_list'    => true,
+        'show_in_admin_status_list' => true,
+        'label_count'               => _n_noop('Shipped (%s)', 'Shipped (%s)', 'woocommerce'),
+    ));
+}
+
+// Voeg de nieuwe status toe aan de lijst van WooCommerce orderstatussen
+add_filter('wc_order_statuses', 'add_shipped_to_order_statuses');
+function add_shipped_to_order_statuses($order_statuses) {
+    $new_statuses = array();
+
+    // Voeg "Shipped" in na "Completed"
+    foreach ($order_statuses as $key => $status) {
+        $new_statuses[$key] = $status;
+        if ('wc-completed' === $key) {
+            $new_statuses['wc-shipped'] = 'Shipped';
+        }
+    }
+
+    return $new_statuses;
+}
