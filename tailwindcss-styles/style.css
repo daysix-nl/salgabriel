@@ -1347,6 +1347,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(235 232 226 / var(--tw-bg-opacity));
 }
+.bg-\[\#F4F4F4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
+}
 .bg-\[\#F6F6F4\] {
   --tw-bg-opacity: 1;
   background-color: rgb(246 246 244 / var(--tw-bg-opacity));
@@ -1454,6 +1458,9 @@ video {
 }
 .pb-\[30px\] {
   padding-bottom: 30px;
+}
+.pb-\[35px\] {
+  padding-bottom: 35px;
 }
 .pb-\[40px\] {
   padding-bottom: 40px;

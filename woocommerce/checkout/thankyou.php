@@ -55,24 +55,32 @@ defined( 'ABSPATH' ) || exit;
 
 				<div class="custom-afrekenen md:mt-[10px] lg:mt-[60px] xl:mt-[70px] mb-[60px] lg:mb-[200px] xl:mb-[132px]">
 					<div class="container lg:flex lg:justify-between lg:px-[30px] xl:px-[unset]">
-						<div class="w-full lg:max-w-[651px] xl:max-w-[736px]">
-							<h1 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase">Order confirmation #<?php echo $order_number;?></h1>
-							<hr class="border-[#DDDDDD] my-[10px]">
-							<p class="font-jost text-16 leading-28 mt-[20px]"><?php echo $customer_first_name;?>, thank you for your oder!<br>We’ve successfully received your order #<?php echo $order_number;?>. You can find your purchase information below:</p>
-							<div class="grid md:grid-cols-2 mt-[30px] gap-[25px]">
-								<div class="">
-									<h3 class="font-jost text-16 leading-28 font-semibold">Details</h3>
-									<p class="font-jost text-16 leading-28 font-normal">
-										<?php echo $billing_address; ?><br>
-										<?php echo $customer_email;?>
-									</p>
+						<div class="w-full lg:max-w-[651px] xl:max-w-[736px] grid">
+							<div class="order-1">
+								<h1 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase">Order confirmation #<?php echo $order_number;?></h1>
+								<hr class="border-[#DDDDDD] my-[10px]">
+							</div>
+							<div class="order-3 lg:order-2">
+								<p class="font-jost text-16 leading-28 mt-[20px]"><?php echo $customer_first_name;?>, thank you for your oder!<br>We’ve successfully received your order #<?php echo $order_number;?>. You can find your purchase information below:</p>
+								<div class="grid md:grid-cols-2 mt-[30px] gap-[25px]">
+									<div class="">
+										<h3 class="font-jost text-16 leading-28 font-semibold">Details</h3>
+										<p class="font-jost text-16 leading-28 font-normal">
+											<?php echo $billing_address; ?><br>
+											<?php echo $customer_email;?>
+										</p>
+									</div>
+									<div class="">
+										<h3 class="font-jost text-16 leading-28 font-semibold">Shipping Address</h3>
+										<p class="font-jost text-16 leading-28 font-normal">
+											<?php echo $shipping_address; ?>
+										</p>
+									</div>
 								</div>
-								<div class="">
-									<h3 class="font-jost text-16 leading-28 font-semibold">Shipping Address</h3>
-									<p class="font-jost text-16 leading-28 font-normal">
-										<?php echo $shipping_address; ?>
-									</p>
-								</div>
+							</div>
+							<!-- HOLIDAY MESSAGE -->
+							<div class="w-full bg-[#F4F4F4] mt-[20px] order-2 lg:order-3 text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost px-2 md:pr-3 lg:px-4 pt-[30px] pb-[35px]">
+								<p>Want to make sure you have your package in time for Christmas? After placing your order, you can arrange local pick-up in Amsterdam & Rotterdam. Just email us at <a href="mailto:contact@salgabriel.com" class="font-bold">contact@salgabriel.com</a>, and we’ll set it up! <br><br>Happy Holidays! 🎄</p>
 							</div>
 						</div>
 						<div class="w-full lg:max-w-[337px] xl:max-w-[381px] h-auto ">
