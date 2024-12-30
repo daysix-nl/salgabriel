@@ -798,3 +798,15 @@ button.update-cart {
     right: 16px !important;
     width: 20px !important;
 }
+
+.select2-dropdown {
+    margin-top: -30px !important;
+    border: 1px solid dedede !important;
+    border-radius: 0px !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: #2e2e2e !important;
+    color: #fff !important;
+}
