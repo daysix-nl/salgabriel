@@ -21,7 +21,7 @@
     <title><?php bloginfo( 'name' ); ?></title>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class( 'page-block relative menu-non-active search-nonactive' ); ?>>
+<body <?php body_class( 'page-block relative menu-non-active search-nonactive salgabriel' ); ?>>
 <header class="fixed top-0 left-0 right-0 bg-white z-[9999]">
 
 <section class="h-[30px] md:h-[35px] bg-black w-full items-center justify-center flex">

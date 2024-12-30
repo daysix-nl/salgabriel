@@ -780,43 +780,44 @@ button.update-cart {
 //         }
 //     }
 // }
-
-.select2-container--default .select2-selection--single {
-    background-color: #fff !important;
-    border-radius: 0px !important;
-    border: 1px solid #dedede !important;
-    height: 53px !important;
-    padding-left: 0px !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 53px !important;
-    position: absolute !important;
-    top: 1px !important;
-    right: 16px !important;
-    width: 20px !important;
-}
-
-.select2-dropdown {
-    margin-top: -43px !important;
-    border: 1px solid #dedede !important;
-    border-radius: 0px !important;
-
-    @media (min-width: 768px) {
-        margin-top: -31px !important;
+.salgabriel {
+    .select2-container--default .select2-selection--single {
+        background-color: #fff !important;
+        border-radius: 0px !important;
+        border: 1px solid #dedede !important;
+        height: 53px !important;
+        padding-left: 0px !important;
+        display: flex !important;
+        align-items: center !important;
     }
-}
 
-.select2-container--default .select2-results__option--highlighted[aria-selected],
-.select2-container--default .select2-results__option--highlighted[data-selected] {
-    background-color: #2e2e2e !important;
-    color: #fff !important;
-}
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 53px !important;
+        position: absolute !important;
+        top: 1px !important;
+        right: 16px !important;
+        width: 20px !important;
+    }
 
-#billing_state_field,
-#shipping_state_field {
-    order: 6 !important;
-    width: 100% !important;
+    .select2-dropdown {
+        margin-top: -43px !important;
+        border: 1px solid #dedede !important;
+        border-radius: 0px !important;
+
+        @media (min-width: 768px) {
+            margin-top: -30px !important;
+        }
+    }
+
+    .select2-container--default .select2-results__option--highlighted[aria-selected],
+    .select2-container--default .select2-results__option--highlighted[data-selected] {
+        background-color: #2e2e2e !important;
+        color: #fff !important;
+    }
+
+    #billing_state_field,
+    #shipping_state_field {
+        order: 6 !important;
+        width: 100% !important;
+    }
 }
