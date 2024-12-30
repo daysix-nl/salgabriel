@@ -800,9 +800,13 @@ button.update-cart {
 }
 
 .select2-dropdown {
-    margin-top: -30px !important;
-    border: 1px solid dedede !important;
+    margin-top: -43px !important;
+    border: 1px solid #dedede !important;
     border-radius: 0px !important;
+
+    @media (min-width: 768px) {
+        margin-top: -30px !important;
+    }
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected],
