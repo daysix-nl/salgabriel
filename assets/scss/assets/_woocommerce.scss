@@ -786,7 +786,7 @@ button.update-cart {
     border-radius: 0px !important;
     border: 1px solid #dedede !important;
     height: 53px !important;
-    padding-left: 10px !important;
+    padding-left: 0px !important;
     display: flex !important;
     align-items: center !important;
 }
@@ -815,7 +815,8 @@ button.update-cart {
     color: #fff !important;
 }
 
-#billing_state_field {
+#billing_state_field,
+#shipping_state_field {
     order: 6 !important;
     width: 100% !important;
 }
