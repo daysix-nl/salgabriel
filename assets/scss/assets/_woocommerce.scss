@@ -766,17 +766,35 @@ button.update-cart {
     margin-bottom: 5px !important;
 }
 
-#billing_country_field,
-#shipping_country_field {
-    .woocommerce-input-wrapper {
-        border: 1px solid #dedede !important;
-        height: 53px !important;
-        padding-left: 10px !important;
-        display: flex !important;
-        align-items: center !important;
+// #billing_country_field,
+// #shipping_country_field {
+//     .woocommerce-input-wrapper {
+//         border: 1px solid #dedede !important;
+//         height: 53px !important;
+//         padding-left: 10px !important;
+//         display: flex !important;
+//         align-items: center !important;
 
-        strong {
-            font-weight: 400 !important;
-        }
-    }
+//         strong {
+//             font-weight: 400 !important;
+//         }
+//     }
+// }
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff !important;
+    border-radius: 0px !important;
+    border: 1px solid #dedede !important;
+    height: 53px !important;
+    padding-left: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 53px !important;
+    position: absolute !important;
+    top: 1px !important;
+    right: 16px !important;
+    width: 20px !important;
 }
