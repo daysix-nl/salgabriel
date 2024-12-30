@@ -78,10 +78,10 @@ defined( 'ABSPATH' ) || exit;
 									</div>
 								</div>
 							</div>
-							<!-- HOLIDAY MESSAGE -->
+							<!-- HOLIDAY MESSAGE
 							<div class="w-full bg-[#F4F4F4] mt-[20px] order-2 lg:order-3 text-black text-15 leading-26 lg:text-16 lg:leading-28 tracking-[0.025em] font-jost px-2 md:pr-3 lg:px-4 pt-[30px] pb-[35px]">
 								<p>Want to make sure you have your package in time for Christmas? After placing your order, you can arrange local pick-up in Amsterdam & Rotterdam. Just email us at <a href="mailto:contact@salgabriel.com" class="font-bold">contact@salgabriel.com</a>, and we’ll set it up! <br><br>Happy Holidays! 🎄</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="w-full lg:max-w-[337px] xl:max-w-[381px] h-auto ">
 							<div class="sticky mt-[50px] md:mt-[50px] lg:mt-[unset] ">
