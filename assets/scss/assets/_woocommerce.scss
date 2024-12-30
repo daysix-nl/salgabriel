@@ -45,7 +45,7 @@
         #shipping_country_field {
             width: 100% !important;
             order: 3 !important;
-            display: none !important;
+
         }
 
 
@@ -100,9 +100,9 @@
 
             #billing_country_field,
             #shipping_country_field {
-                width: 35% !important;
+                width: 100% !important;
                 order: 3 !important;
-                display: none !important;
+
             }
 
 
@@ -376,7 +376,6 @@
         #shipping_country_field {
             width: 100% !important;
             order: 5 !important;
-            display: none !important;
         }
 
 
@@ -427,9 +426,8 @@
 
             #billing_country_field,
             #shipping_country_field {
-                width: 35% !important;
+                width: 100% !important;
                 order: 5 !important;
-                display: none !important;
             }
 
 
@@ -766,4 +764,19 @@ button.update-cart {
 
 .mollie-components-description svg {
     margin-bottom: 5px !important;
+}
+
+#billing_country_field,
+#shipping_country_field {
+    .woocommerce-input-wrapper {
+        border: 1px solid #dedede !important;
+        height: 53px !important;
+        padding-left: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+
+        strong {
+            font-weight: 400 !important;
+        }
+    }
 }
